@@ -3,7 +3,6 @@ from turtle import Screen
 from Lib import random
 
 
-
 class TurtleRace:
 
     def __init__(self):
