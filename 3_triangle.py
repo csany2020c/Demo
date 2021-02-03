@@ -1,12 +1,13 @@
 from turtle import Turtle
 from turtle import Screen
 
+
 class Triangle:
+
     def triangle(self, turtle, width=100):
         for i in range(3):
             turtle.forward(width)
             turtle.left(120)
-
 
     def __init__(self):
         screen = Screen()
@@ -22,7 +23,6 @@ class Triangle:
             turtle.forward(width)
             turtle.left(60)
         screen.mainloop()
-
 
 
 Triangle()
