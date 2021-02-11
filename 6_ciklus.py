@@ -35,6 +35,40 @@ class TurtleOOP:
             turtle.pendown()
             turtle.goto(right, -60 - i*90 + top)
 
+
+        turtle.penup()
+        turtle.goto(0,30)
+        turtle.setheading(90)
+        turtle.pendown()
+        for i in range(90):
+            turtle.forward(1)
+            turtle.left(4)
+        turtle.setheading(-90)
+        turtle.forward(30)
+        for i in range(45):
+            turtle.forward(1)
+            turtle.right(4)
+
+        turtle.penup()
+        turtle.goto(7, -10)
+        turtle.setheading(90)
+        turtle.pendown()
+        for i in range(36):
+            turtle.forward(1)
+            turtle.right(10)
+
+        turtle.penup()
+        turtle.goto(50, -10)
+        turtle.setheading(225)
+        turtle.pendown()
+        for i in range(75):
+            turtle.forward(1)
+            turtle.right(4)
+
+        turtle.penup()
+        turtle.goto(500, -100)
+
+
         screen.mainloop()
 
 
