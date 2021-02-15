@@ -1,5 +1,6 @@
 from turtle import Turtle
 from turtle import Screen
+from math import *
 
 
 class TurtleOOP:
@@ -7,6 +8,8 @@ class TurtleOOP:
         screen = Screen()
         # screen.setup(width=640, height=480)
         turtle = Turtle()
+
+        print(sqrt(2))
         top = screen.window_height() / 2
         left = -screen.window_width() / 2
         right = screen.window_width() / 2
