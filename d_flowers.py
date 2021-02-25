@@ -23,14 +23,26 @@ class TurtleOOP:
     def __init__(self):
         self.turtle._delay(0)
         self.turtle.speed(0)
+
+        left = -self.screen.window_width() / 2
+        right = self.screen.window_width() / 2
+        top = self.screen.window_height() / 2
+        bottom = -self.screen.window_height() / 2
+
+        r = Random()
+        self.turtle.settiltangle()
+
         self.turtle.color("red")
         self.turtle.fillcolor("yellow")
 
-        self.turtle.goto(80, 30)
-        self.flower(30, 21)
-
-        self.turtle.goto(-30, 80)
-        self.flower(60, 21)
+        for i in range(100):
+            self.turtle.penup()
+            x = r.randint(left, right)
+            y = r.randint(bottom, top)
+            size = r.randint(20, 50)
+            self.turtle.goto(x, y)
+            self.turtle.pendown()
+            self.flower(size, 11)
 
         self.screen.mainloop()
 
