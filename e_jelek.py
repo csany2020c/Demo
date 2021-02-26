@@ -5,47 +5,9 @@ from random import Random
 
 class Jel:
     turtle: Turtle
-    screen = Screen()
 
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
-
-    def hajo(self):
-        self.turtle.speed()
-        self.screen.setup(width=128, height=128)
-        self.turtle.penup()
-        self.turtle.goto(23, -20)
-        self.turtle.pendown()
-        self.trapez()
-        self.turtle.penup()
-        self.turtle.goto(3, -10)
-        self.turtle.pendown()
-        self.turtle.left(-125)
-        self.turtle.penup()
-        self.turtle.goto(-2, 30)
-        self.turtle.pendown()
-        self.turtle.forward(50)
-        self.turtle.penup()
-        self.turtle.goto(-16, 7)
-        self.turtle.pendown()
-        self.triangle()
-        self.screen.mainloop()
-
-    def trapez(self):
-        self.turtle.left(180)
-        self.turtle.forward(50)
-        self.turtle.left(150)
-        self.turtle.forward(20)
-        self.turtle.left(30)
-        self.turtle.forward(20)
-        self.turtle.left(37)
-        self.turtle.forward(20)
-
-    def triangle(self):
-        self.turtle.left(90)
-        for i in range(3):
-            self.turtle.forward(30)
-            self.turtle.left(120)
 
     def gyertya(self):
         self.turtle.right(self.turtle.heading())
@@ -75,7 +37,7 @@ class Jel:
         self.turtle.right(180)
         self.turtle.circle(16, -160)
 
-    def domino(self, a):
+    def domino(self, a:int = 10):
         for i in range(2):
             self.turtle.forward(a)
             self.turtle.left(90)
@@ -102,7 +64,9 @@ class Jel:
         self.turtle.circle(a / 15)
         self.turtle.end_fill()
 
+
     def cseresznye(self):
+        self.turtle.setheading(0)
         self.turtle.circle(25, 360, 360)
         self.turtle.penup()
         self.turtle.forward(80)
@@ -148,7 +112,7 @@ class Jel:
             self.turtle.right(45)
             self.turtle.circle(20, 60)
 
-    def korte(self, a):
+    def korte(self, a:int = 10):
         self.turtle.begin_fill()
         self.turtle.left(270)
         for i in range(8):
@@ -177,13 +141,26 @@ class Jel:
             self.turtle.left(165)
 
     def jel(self, tipus: int):
-        tipus = tipus % 2
+        tipus = tipus % 6
         if tipus == 0:
             self.cseresznye()
             return
         if tipus == 1:
             self.nap()
             return
+        if tipus == 2:
+            self.gyertya()
+            return
+        if tipus == 3:
+            self.domino()
+            return
+        if tipus == 4:
+            self.ceruza()
+            return
+        if tipus == 5:
+            self.korte()
+            return
+
 
 
 class Szekreny:
@@ -254,7 +231,7 @@ class Szekreny:
                 self.turtle.penup()
                 self.turtle.goto(startx + x * (width + 10) + width / 2, starty + y * (height + 2) + height / 2)
                 self.turtle.pendown()
-                jelrajzolo.jel(x + y * x)
+                jelrajzolo.jel(x + y * countx)
 
 
 class TurtleOOP:
@@ -279,3 +256,4 @@ class TurtleOOP:
 
 
 t = TurtleOOP()
+
