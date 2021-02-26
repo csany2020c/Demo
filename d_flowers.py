@@ -30,7 +30,6 @@ class TurtleOOP:
         bottom = -self.screen.window_height() / 2
 
         r = Random()
-        self.turtle.settiltangle()
 
         self.turtle.color("red")
         self.turtle.fillcolor("yellow")
