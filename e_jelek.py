@@ -37,6 +37,25 @@ class Jel:
         self.turtle.right(180)
         self.turtle.circle(16, -160)
 
+    def otszog(self, a: int):
+        for i in range(5):
+            self.turtle.forward(10)
+            self.turtle.left(70)
+            r = Random()
+        for j in range(5):
+            self.turtle.penup()
+            self.turtle.goto(r.randint(-30, 20), r.randint(-30, 20))
+            self.turtle.pendown()
+            self.otszog(r.randint(10, 50))
+
+        self.turtle.penup()
+        self.turtle.goto(-50, -25)
+        self.turtle.pendown()
+
+        for i in range(360):
+            self.turtle.forward(1)
+            self.turtle.left(1)
+
     def domino(self, a:int = 10):
         for i in range(2):
             self.turtle.forward(a)
