@@ -9,6 +9,34 @@ class Jel:
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
 
+    def domino(self,a):
+        for i in range(2):
+            self.turtle.forward(a)
+            self.turtle.left(90)
+            self.turtle.forward(a / 2)
+            self.turtle.left(90)
+        self.turtle.forward(a / 2)
+        self.turtle.left(90)
+        self.turtle.forward(a / 2)
+        self.turtle.backward(a / 4)
+        self.turtle.left(90)
+        self.turtle.penup()
+        self.turtle.forward(a / 4)
+        self.turtle.pendown()
+        self.turtle.left(90)
+        self.turtle.begin_fill()
+        self.turtle.circle(a / 15)
+        self.turtle.end_fill()
+        self.turtle.left(90)
+        self.turtle.penup()
+        self.turtle.forward(a / 2)
+        self.turtle.left(90)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        self.turtle.circle(a / 15)
+        self.turtle.end_fill()
+
+
     def cseresznye(self):
         self.turtle.circle(25, 360, 360)
         self.turtle.penup()
@@ -41,6 +69,18 @@ class Jel:
 
             for g in range(2):
                 self.turtle.forward(20 / 2)
+
+        self.turtle.right(90)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(50)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.right(50)
+        self.turtle.forward(0)
+        for i in range(22):
+            self.turtle.right(45)
+            self.turtle.circle(20, 60)
 
     def nap(self):
         for i in range(25):
