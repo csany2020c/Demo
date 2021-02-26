@@ -9,6 +9,44 @@ class Jel:
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
 
+    def vonat(self):
+        s = self
+        s.turtle.forward(128)
+        s.turtle.left(90)
+        s.turtle.forward(32)
+        s.turtle.left(90)
+        s.turtle.forward(16)
+        s.turtle.right(90)
+        s.turtle.forward(32)
+        s.turtle.left(90)
+        s.turtle.forward(16)
+        s.turtle.left(90)
+        s.turtle.forward(32)
+        s.turtle.right(90)
+        s.turtle.forward(64)
+        s.turtle.right(90)
+        s.turtle.forward(32)
+        s.turtle.left(90)
+        s.turtle.forward(32)
+        s.turtle.left(90)
+        s.turtle.forward(64)
+        for i in range(180):
+            s.turtle.forward(0.3)
+            s.turtle.left(1)
+        s.turtle.right(90)
+        s.turtle.forward(8)
+        s.turtle.right(90)
+        for i in range(180):
+            s.turtle.forward(0.3)
+            s.turtle.left(1)
+        s.turtle.right(90)
+        s.turtle.forward(8)
+        s.turtle.right(90)
+        for i in range(180):
+            s.turtle.forward(0.3)
+            s.turtle.left(1)
+
+
     def gyertya(self):
         self.turtle.right(self.turtle.heading())
         self.turtle.left(90)
@@ -36,6 +74,25 @@ class Jel:
         self.turtle.right(self.turtle.heading())
         self.turtle.right(180)
         self.turtle.circle(16, -160)
+
+    def otszog(self, a: int):
+        for i in range(5):
+            self.turtle.forward(10)
+            self.turtle.left(70)
+            r = Random()
+        for j in range(5):
+            self.turtle.penup()
+            self.turtle.goto(r.randint(-30, 20), r.randint(-30, 20))
+            self.turtle.pendown()
+            self.otszog(r.randint(10, 50))
+
+        self.turtle.penup()
+        self.turtle.goto(-50, -25)
+        self.turtle.pendown()
+
+        for i in range(360):
+            self.turtle.forward(1)
+            self.turtle.left(1)
 
     def domino(self, a:int = 10):
         for i in range(2):
