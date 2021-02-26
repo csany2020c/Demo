@@ -123,6 +123,7 @@ class TurtleOOP:
         sz = Szekreny(self.turtle)
         self.turtle.goto(self.left, self.bottom)
         sz.szekreny(5, 3)
+
         self.screen.mainloop()
 
 
