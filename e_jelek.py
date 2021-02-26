@@ -9,8 +9,6 @@ class Jel:
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
 
-
-
     def gyertya(self):
         self.turtle.right(self.turtle.heading())
         self.turtle.left(90)
@@ -39,44 +37,7 @@ class Jel:
         self.turtle.right(180)
         self.turtle.circle(16, -160)
 
-    def vonat(self):
-            s = self
-            s.turtle.forward(128)
-            s.turtle.left(90)
-            s.turtle.forward(32)
-            s.turtle.left(90)
-            s.turtle.forward(16)
-            s.turtle.right(90)
-            s.turtle.forward(32)
-            s.turtle.left(90)
-            s.turtle.forward(16)
-            s.turtle.left(90)
-            s.turtle.forward(32)
-            s.turtle.right(90)
-            s.turtle.forward(64)
-            s.turtle.right(90)
-            s.turtle.forward(32)
-            s.turtle.left(90)
-            s.turtle.forward(32)
-            s.turtle.left(90)
-            s.turtle.forward(64)
-            for i in range(180):
-                s.turtle.forward(0.3)
-                s.turtle.left(1)
-            s.turtle.right(90)
-            s.turtle.forward(8)
-            s.turtle.right(90)
-            for i in range(180):
-                s.turtle.forward(0.3)
-                s.turtle.left(1)
-            s.turtle.right(90)
-            s.turtle.forward(8)
-            s.turtle.right(90)
-            for i in range(180):
-                s.turtle.forward(0.3)
-                s.turtle.left(1)
-
-    def domino(self,a):
+    def domino(self, a:int = 10):
         for i in range(2):
             self.turtle.forward(a)
             self.turtle.left(90)
@@ -105,6 +66,7 @@ class Jel:
 
 
     def cseresznye(self):
+        self.turtle.setheading(0)
         self.turtle.circle(25, 360, 360)
         self.turtle.penup()
         self.turtle.forward(80)
@@ -150,7 +112,7 @@ class Jel:
             self.turtle.right(45)
             self.turtle.circle(20, 60)
 
-    def korte(self, a):
+    def korte(self, a:int = 10):
         self.turtle.begin_fill()
         self.turtle.left(270)
         for i in range(8):
@@ -173,21 +135,32 @@ class Jel:
         self.turtle.end_fill()
         self.turtle.left(180)
 
-
-
     def nap(self):
         for i in range(25):
             self.turtle.forward(128)
             self.turtle.left(165)
 
     def jel(self, tipus: int):
-        tipus = tipus % 2
+        tipus = tipus % 6
         if tipus == 0:
             self.cseresznye()
             return
         if tipus == 1:
             self.nap()
             return
+        if tipus == 2:
+            self.gyertya()
+            return
+        if tipus == 3:
+            self.domino()
+            return
+        if tipus == 4:
+            self.ceruza()
+            return
+        if tipus == 5:
+            self.korte()
+            return
+
 
 
 class Szekreny:
@@ -258,7 +231,7 @@ class Szekreny:
                 self.turtle.penup()
                 self.turtle.goto(startx + x * (width + 10) + width / 2, starty + y * (height + 2) + height / 2)
                 self.turtle.pendown()
-                jelrajzolo.jel(x + y * x)
+                jelrajzolo.jel(x + y * countx)
 
 
 class TurtleOOP:
