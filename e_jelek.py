@@ -9,6 +9,34 @@ class Jel:
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
 
+    def gyertya(self):
+        self.turtle.right(self.turtle.heading())
+        self.turtle.left(90)
+        for i in range(2):
+            self.turtle.forward(90)
+            self.turtle.right(90)
+            self.turtle.forward(30)
+            self.turtle.right(90)
+        self.turtle.penup()
+        self.turtle.forward(90)
+        self.turtle.right(90)
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.pendown()
+        self.turtle.forward(20)
+        self.turtle.penup()
+        self.turtle.right(90)
+        self.turtle.forward(5)
+        self.turtle.left(90)
+        self.turtle.pendown()
+        self.turtle.right(60)
+        self.turtle.circle(10, -180)
+        self.turtle.right(180)
+        self.turtle.circle(10, 90)
+        self.turtle.right(self.turtle.heading())
+        self.turtle.right(180)
+        self.turtle.circle(16, -160)
+
     def domino(self,a):
         for i in range(2):
             self.turtle.forward(a)
