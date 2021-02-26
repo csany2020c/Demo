@@ -20,6 +20,18 @@ class Jel:
         self.turtle.left(120)
         self.turtle.forward(80)
 
+        self.turtle.right(90)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(50)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.right(50)
+        self.turtle.forward(0)
+        for i in range(22):
+            self.turtle.right(45)
+            self.turtle.circle(20, 60)
+
     def nap(self):
         for i in range(25):
             self.turtle.forward(128)
