@@ -75,7 +75,7 @@ class Jel:
         self.turtle.right(180)
         self.turtle.circle(16, -160)
 
-    def otszog(self, a: int):
+    def focilabda(self, a: int):
         for i in range(5):
             self.turtle.forward(10)
             self.turtle.left(70)
