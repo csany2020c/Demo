@@ -76,6 +76,7 @@ class Jel:
         self.turtle.forward(80)
         self.turtle.left(120)
         self.turtle.forward(80)
+
     def ceruza(self):
         for i in range(2):
             self.turtle.forward(30)
