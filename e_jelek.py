@@ -20,6 +20,29 @@ class Jel:
         self.turtle.left(120)
         self.turtle.forward(80)
 
+    def korte(self, a):
+        self.turtle.begin_fill()
+        self.turtle.left(270)
+        for i in range(8):
+            self.turtle.forward(a)
+            self.turtle.left(10)
+        for i in range(10):
+            self.turtle.forward(a-2)
+            self.turtle.right(15)
+        self.turtle.right(20)
+        self.turtle.forward(50)
+        self.turtle.forward(50)
+        for i in range(10):
+            self.turtle.forward(a-2)
+            self.turtle.right(15)
+        for i in range(8):
+            self.turtle.forward(a)
+            self.turtle.left(10)
+        self.turtle.right(110)
+        self.turtle.forward(35)
+        self.turtle.end_fill()
+        self.turtle.left(180)
+
     def nap(self):
         for i in range(25):
             self.turtle.forward(128)
