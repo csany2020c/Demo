@@ -5,9 +5,47 @@ from random import Random
 
 class Jel:
     turtle: Turtle
+    screen = Screen()
 
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
+
+    def hajo(self):
+        self.turtle.speed()
+        self.screen.setup(width=128, height=128)
+        self.turtle.penup()
+        self.turtle.goto(23, -20)
+        self.turtle.pendown()
+        self.trapez()
+        self.turtle.penup()
+        self.turtle.goto(3, -10)
+        self.turtle.pendown()
+        self.turtle.left(-125)
+        self.turtle.penup()
+        self.turtle.goto(-2, 30)
+        self.turtle.pendown()
+        self.turtle.forward(50)
+        self.turtle.penup()
+        self.turtle.goto(-16, 7)
+        self.turtle.pendown()
+        self.triangle()
+        self.screen.mainloop()
+
+    def trapez(self):
+        self.turtle.left(180)
+        self.turtle.forward(50)
+        self.turtle.left(150)
+        self.turtle.forward(20)
+        self.turtle.left(30)
+        self.turtle.forward(20)
+        self.turtle.left(37)
+        self.turtle.forward(20)
+
+    def triangle(self):
+        self.turtle.left(90)
+        for i in range(3):
+            self.turtle.forward(30)
+            self.turtle.left(120)
 
     def gyertya(self):
         self.turtle.right(self.turtle.heading())
@@ -37,7 +75,7 @@ class Jel:
         self.turtle.right(180)
         self.turtle.circle(16, -160)
 
-    def domino(self,a):
+    def domino(self, a):
         for i in range(2):
             self.turtle.forward(a)
             self.turtle.left(90)
@@ -63,7 +101,6 @@ class Jel:
         self.turtle.begin_fill()
         self.turtle.circle(a / 15)
         self.turtle.end_fill()
-
 
     def cseresznye(self):
         self.turtle.circle(25, 360, 360)
@@ -242,4 +279,3 @@ class TurtleOOP:
 
 
 t = TurtleOOP()
-
