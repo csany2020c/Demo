@@ -84,7 +84,7 @@ class Jel:
             self.turtle.penup()
             self.turtle.goto(r.randint(-30, 20), r.randint(-30, 20))
             self.turtle.pendown()
-            self.otszog(r.randint(10, 50))
+            self.focilabda(r.randint(10, 50))
 
         self.turtle.penup()
         self.turtle.goto(-50, -25)
