@@ -10,6 +10,17 @@ class Jel:
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
 
+    def hold(self):
+        for i in range(128):
+            self.turtle.right(1)
+            self.turtle.forward(1)
+        self.turtle.left(160)
+        for i in range(148):
+            self.turtle.left(1)
+            self.turtle.forward(1)
+        self.turtle.end_fill()
+
+
     def hajo(self):
         self.turtle.speed()
         self.screen.setup(width=128, height=128)
