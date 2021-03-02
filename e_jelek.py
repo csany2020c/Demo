@@ -20,10 +20,9 @@ class Jel:
             self.turtle.forward(1)
         self.turtle.end_fill()
 
-
     def hajo(self):
         self.turtle.speed()
-        self.screen.setup(width=128, height=128)
+        #self.screen.setup(width=128, height=128)
         self.turtle.penup()
         self.turtle.goto(23, -20)
         self.turtle.pendown()
@@ -40,7 +39,7 @@ class Jel:
         self.turtle.goto(-16, 7)
         self.turtle.pendown()
         self.triangle()
-        self.screen.mainloop()
+        #self.screen.mainloop()
 
     def trapez(self):
         self.turtle.left(180)
@@ -95,7 +94,6 @@ class Jel:
             s.turtle.forward(0.3)
             s.turtle.left(1)
 
-
     def gyertya(self):
         self.turtle.right(self.turtle.heading())
         self.turtle.left(90)
@@ -125,15 +123,15 @@ class Jel:
         self.turtle.circle(16, -160)
 
     def focilabda(self, a: int):
+        r = Random()
         for i in range(5):
             self.turtle.forward(10)
             self.turtle.left(70)
-            r = Random()
         for j in range(5):
             self.turtle.penup()
             self.turtle.goto(r.randint(-30, 20), r.randint(-30, 20))
             self.turtle.pendown()
-            self.focilabda(r.randint(10, 50))
+        #self.focilabda(r.randint(10, 50))
 
         self.turtle.penup()
         self.turtle.goto(-50, -25)
@@ -169,7 +167,6 @@ class Jel:
         self.turtle.begin_fill()
         self.turtle.circle(a / 15)
         self.turtle.end_fill()
-
 
     def cseresznye(self):
         self.turtle.setheading(0)
@@ -246,27 +243,6 @@ class Jel:
             self.turtle.forward(128)
             self.turtle.left(165)
 
-    def jel(self, tipus: int):
-        tipus = tipus % 6
-        if tipus == 0:
-            self.cseresznye()
-            return
-        if tipus == 1:
-            self.nap()
-            return
-        if tipus == 2:
-            self.gyertya()
-            return
-        if tipus == 3:
-            self.domino()
-            return
-        if tipus == 4:
-            self.ceruza()
-            return
-        if tipus == 5:
-            self.korte()
-            return
-
     def gomba(self):
         for i in range(4):
             self.turtle.forward(70)
@@ -282,6 +258,41 @@ class Jel:
             self.turtle.left(0.8)
             self.turtle.forward(1.7)
 
+    def jel(self, tipus: int):
+        tipus = tipus % 10
+        if tipus == 0:
+            self.hold()
+            return
+        if tipus == 1:
+            self.hajo()
+            return
+        if tipus == 2:
+            self.vonat()
+            return
+        if tipus == 3:
+            self.gyertya()
+            return
+        if tipus == 4:
+            self.focilabda(1)
+            return
+        if tipus == 5:
+            self.domino()
+            return
+        if tipus == 6:
+            self.cseresznye()
+            return
+        if tipus == 7:
+            self.ceruza()
+            return
+        if tipus == 8:
+            self.korte()
+            return
+        if tipus == 9:
+            self.nap()
+            return
+        if tipus == 10:
+            self.gomba()
+            return
 
 
 class Szekreny:
@@ -294,7 +305,7 @@ class Szekreny:
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
 
-    def polc(self, width: int, height: int, depth: int = 40):
+    def polc(self, width: int = 180, height: int = 240, depth: int = 40):
         self.color(0.6, 0.6, 0.6)
         self.turtle.begin_fill()
         self.turtle.pendown()
@@ -338,21 +349,28 @@ class Szekreny:
         self.turtle.end_fill()
         self.turtle.penup()
 
+        self.color(0, 0, 0)
+        self.turtle.penup()
+        self.turtle.left(90)
+        self.turtle.forward(width / 2)
+        self.turtle.left(90)
+        self.turtle.forward(height / 2)
+        self.turtle.left(90)
+        self.turtle.pendown()
+
     def szekreny(self, countx: int = 8, county: int = 2, width: int = 180, height: int = 240, depth: int = 20):
         startx = self.turtle.xcor()
         starty = self.turtle.ycor()
         jelrajzolo = Jel(self.turtle)
+        i = 0
         for x in range(countx):
             for y in range(county):
                 self.turtle.penup()
                 self.turtle.goto(startx + x * (width + 10), starty + y * (height + 2))
                 self.turtle.setheading(0)
                 self.polc(width, height, depth)
-                self.color(0, 0, 0)
-                self.turtle.penup()
-                self.turtle.goto(startx + x * (width + 10) + width / 2, starty + y * (height + 2) + height / 2)
-                self.turtle.pendown()
-                jelrajzolo.jel(x + y * countx)
+                jelrajzolo.jel(i)
+                i = i + 1
 
 
 class TurtleOOP:
@@ -370,8 +388,13 @@ class TurtleOOP:
         self.turtle.speed(0)
         self.turtle.penup()
         sz = Szekreny(self.turtle)
-        self.turtle.goto(self.left, self.bottom)
-        sz.szekreny(5, 3)
+
+        # self.turtle.goto(self.left, self.bottom)
+        # sz.szekreny(5, 3)
+
+        sz.polc()
+        j = Jel(self.turtle)
+        j.hold()
 
         self.screen.mainloop()
 
