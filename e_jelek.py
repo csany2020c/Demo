@@ -41,6 +41,17 @@ class Jel:
         self.triangle()
         #self.screen.mainloop()
 
+    def letra(self):
+        self.turtle._delay(0)
+        self.turtle.speed(0)
+        self.turtle.left(90)
+        self.turtle.goto(0, -180)
+        for i in range(7):
+            for i in range(4):
+                self.turtle.forward(40)
+                self.turtle.right(90)
+            self.turtle.forward(40)
+
     def trapez(self):
         self.turtle.left(180)
         self.turtle.forward(50)
@@ -394,7 +405,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.hold()
+        j.letra()
 
         self.screen.mainloop()
 
