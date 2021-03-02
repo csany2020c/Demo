@@ -136,7 +136,9 @@ class Jel:
         #self.focilabda(r.randint(10, 50))
 
         self.turtle.penup()
-        self.turtle.goto(-50, -25)
+        self.turtle.forward(125)
+        self.turtle.left(90)
+        self.turtle.forward(150)
         self.turtle.pendown()
 
         for i in range(360):
@@ -206,6 +208,10 @@ class Jel:
             for g in range(2):
                 self.turtle.forward(20 / 2)
 
+
+
+
+    def fa(self):
         self.turtle.right(90)
         self.turtle.forward(100)
         self.turtle.left(90)
@@ -219,7 +225,13 @@ class Jel:
             self.turtle.circle(20, 60)
 
     def korte(self, a:int = 10):
+        self.turtle.fillcolor(0,0.8, 0.2)
         self.turtle.begin_fill()
+        self.turtle.left(90)
+        self.turtle.penup()
+        self.turtle.forward(60)
+        self.turtle.right(90)
+        self.turtle.pendown()
         self.turtle.left(270)
         for i in range(8):
             self.turtle.forward(a)
@@ -397,7 +409,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.domino()
+        j.focilabda(0)
 
         self.screen.mainloop()
 
