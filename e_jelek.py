@@ -223,6 +223,11 @@ class Jel:
     def korte(self, a:int = 10):
         self.turtle.fillcolor(0,0.8, 0.2)
         self.turtle.begin_fill()
+        self.turtle.left(90)
+        self.turtle.penup()
+        self.turtle.forward(60)
+        self.turtle.right(90)
+        self.turtle.pendown()
         self.turtle.left(270)
         for i in range(8):
             self.turtle.forward(a)
@@ -400,7 +405,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.domino()
+        j.korte()
 
         self.screen.mainloop()
 
