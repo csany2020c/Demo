@@ -51,6 +51,17 @@ class Jel:
         self.turtle.left(37)
         self.turtle.forward(20)
 
+    def letra(self):
+        self.turtle._delay(0)
+        self.turtle.speed(0)
+        self.turtle.left(90)
+        self.turtle.goto(0, -180)
+        for i in range(7):
+            for i in range(4):
+                self.turtle.forward(40)
+                self.turtle.right(90)
+            self.turtle.forward(40)
+
     def triangle(self):
         self.turtle.left(90)
         for i in range(3):
@@ -186,6 +197,7 @@ class Jel:
         self.turtle.forward(80)
 
     def ceruza(self):
+
         for i in range(2):
             self.turtle.forward(30)
             self.turtle.left(90)
@@ -208,7 +220,12 @@ class Jel:
             for g in range(2):
                 self.turtle.forward(20 / 2)
 
-
+        j = Jel
+        s = Szekreny
+        turtle = Turtle
+        screen = Screen
+        s.polc(turtle)
+        j.ceruza()
 
 
     def fa(self):
