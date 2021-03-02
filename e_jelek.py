@@ -51,6 +51,17 @@ class Jel:
         self.turtle.left(37)
         self.turtle.forward(20)
 
+    def letra(self):
+        self.turtle._delay(0)
+        self.turtle.speed(0)
+        self.turtle.left(90)
+        self.turtle.goto(0, -180)
+        for i in range(7):
+            for i in range(4):
+                self.turtle.forward(40)
+                self.turtle.right(90)
+            self.turtle.forward(40)
+
     def triangle(self):
         self.turtle.left(90)
         for i in range(3):
@@ -96,7 +107,11 @@ class Jel:
             s.turtle.left(1)
 
     def gyertya(self):
-        self.turtle.right(self.turtle.heading())
+        self.turtle.setheading(90)
+        self.turtle.forward(50)
+        self.turtle.right(90)
+        self.turtle.forward(30)
+        self.turtle.setheading(0)
         self.turtle.left(90)
         for i in range(2):
             self.turtle.forward(90)
@@ -183,6 +198,7 @@ class Jel:
         self.turtle.forward(80)
 
     def ceruza(self):
+
         for i in range(2):
             self.turtle.forward(30)
             self.turtle.left(90)
@@ -205,7 +221,12 @@ class Jel:
             for g in range(2):
                 self.turtle.forward(20 / 2)
 
-
+        j = Jel
+        s = Szekreny
+        turtle = Turtle
+        screen = Screen
+        s.polc(turtle)
+        j.ceruza()
 
 
     def fa(self):
@@ -265,6 +286,58 @@ class Jel:
             self.turtle.left(0.8)
             self.turtle.forward(1.7)
 
+    def haziko(self):
+        for i in range(1):
+            self.turtle.forward(100)
+            self.turtle.left(90)
+            self.turtle.forward(100)
+            self.turtle.left(90)
+            self.turtle.forward(100)
+            self.turtle.left(90)
+            self.turtle.forward(100)
+            self.turtle.left(90)
+            self.turtle.forward(50)
+            self.turtle.left(90)
+            self.turtle.forward(25)
+            self.turtle.right(90)
+            self.turtle.forward(10)
+            self.turtle.right(90)
+            self.turtle.forward(25)
+            self.turtle.left(90)
+            self.turtle.forward(20)
+            self.turtle.left(90)
+            self.turtle.penup()
+            self.turtle.forward(40)
+            self.turtle.pendown()
+            self.turtle.forward(15)
+            self.turtle.left(90)
+            self.turtle.forward(15)
+            self.turtle.left(90)
+            self.turtle.forward(15)
+            self.turtle.left(90)
+            self.turtle.forward(15)
+            self.turtle.left(90)
+            self.turtle.forward(10)
+            self.turtle.left(90)
+            self.turtle.forward(15)
+            self.turtle.right(90)
+            self.turtle.forward(5)
+            self.turtle.right(90)
+            self.turtle.forward(5)
+            self.turtle.right(90)
+            self.turtle.forward(15)
+            self.turtle.penup()
+            self.turtle.forward(40)
+            self.turtle.pendown()
+            self.turtle.right(90)
+            self.turtle.forward(70)
+            self.turtle.right(90)
+            self.turtle.forward(100)
+            self.turtle.right(45)
+            self.turtle.forward(75)
+            self.turtle.right(95)
+            self.turtle.forward(75)
+
     def jel(self, tipus: int):
         tipus = tipus % 10
         if tipus == 0:
@@ -300,7 +373,9 @@ class Jel:
         if tipus == 10:
             self.gomba()
             return
-
+        if tipus == 11:
+            self.haziko()
+            return
 
 class Szekreny:
     turtle: Turtle
@@ -391,7 +466,7 @@ class TurtleOOP:
     bottom = -screen.window_height() / 2
 
     def __init__(self):
-        self.turtle._delay(0)
+
         self.turtle.speed(0)
         self.turtle.penup()
         sz = Szekreny(self.turtle)
@@ -406,5 +481,5 @@ class TurtleOOP:
         self.screen.mainloop()
 
 
-t = TurtleOOP()
+#t = TurtleOOP()
 
