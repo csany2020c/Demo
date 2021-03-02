@@ -20,24 +20,21 @@ class Jel:
             self.turtle.forward(1)
         self.turtle.end_fill()
 
-    def hajo(self):
+    def hajo(self, width: int = 180, height: int = 240):
         self.turtle.speed()
         #self.screen.setup(width=128, height=128)
         self.turtle.penup()
-        self.turtle.goto(23, -20)
+        self.turtle.goto(height / 2, width / 2)
         self.turtle.pendown()
         self.trapez()
         self.turtle.penup()
-        self.turtle.goto(3, -10)
+        self.turtle.left(145)
+        self.turtle.forward(30)
         self.turtle.pendown()
-        self.turtle.left(-125)
-        self.turtle.penup()
-        self.turtle.goto(-2, 30)
-        self.turtle.pendown()
+        self.turtle.right(95)
         self.turtle.forward(50)
-        self.turtle.penup()
-        self.turtle.goto(-16, 7)
-        self.turtle.pendown()
+        self.turtle.right(120)
+        self.turtle.left(182.5)
         self.triangle()
         #self.screen.mainloop()
 
@@ -95,7 +92,11 @@ class Jel:
             s.turtle.left(1)
 
     def gyertya(self):
-        self.turtle.right(self.turtle.heading())
+        self.turtle.setheading(90)
+        self.turtle.forward(50)
+        self.turtle.right(90)
+        self.turtle.forward(30)
+        self.turtle.setheading(0)
         self.turtle.left(90)
         for i in range(2):
             self.turtle.forward(90)
@@ -134,7 +135,9 @@ class Jel:
         #self.focilabda(r.randint(10, 50))
 
         self.turtle.penup()
-        self.turtle.goto(-50, -25)
+        self.turtle.forward(125)
+        self.turtle.left(90)
+        self.turtle.forward(150)
         self.turtle.pendown()
 
         for i in range(360):
@@ -395,7 +398,7 @@ class TurtleOOP:
     bottom = -screen.window_height() / 2
 
     def __init__(self):
-        self.turtle._delay(0)
+
         self.turtle.speed(0)
         self.turtle.penup()
         sz = Szekreny(self.turtle)
@@ -405,10 +408,10 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.korte()
+        j.focilabda(0)
 
         self.screen.mainloop()
 
 
-t = TurtleOOP()
+#t = TurtleOOP()
 
