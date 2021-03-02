@@ -95,7 +95,11 @@ class Jel:
             s.turtle.left(1)
 
     def gyertya(self):
-        self.turtle.right(self.turtle.heading())
+        self.turtle.setheading(90)
+        self.turtle.forward(50)
+        self.turtle.right(90)
+        self.turtle.forward(30)
+        self.turtle.setheading(0)
         self.turtle.left(90)
         for i in range(2):
             self.turtle.forward(90)
