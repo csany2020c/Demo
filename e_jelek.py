@@ -203,6 +203,10 @@ class Jel:
             for g in range(2):
                 self.turtle.forward(20 / 2)
 
+
+
+        
+    def fa(self):
         self.turtle.right(90)
         self.turtle.forward(100)
         self.turtle.left(90)
