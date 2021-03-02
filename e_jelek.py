@@ -387,37 +387,49 @@ class Jel:
     def jel(self, tipus: int):
         tipus = tipus % 10
         if tipus == 0:
-            self.hold()
+            self.hold() #Márkus Bence
             return
         if tipus == 1:
-            self.hajo()
+            self.hajo() # Csongor
             return
         if tipus == 2:
-            self.vonat()
+            self.vonat() # Loránd
             return
         if tipus == 3:
-            self.gyertya()
+            self.gyertya() #Zsebők Dávid
             return
         if tipus == 4:
-            self.focilabda(1)
+            self.focilabda(1) # Németh Csaba Bence
             return
         if tipus == 5:
-            self.domino()
+            self.domino() # Kancsal Máté
             return
         if tipus == 6:
-            self.cseresznye()
+            self.cseresznye() # Horváth Boldizsár
             return
         if tipus == 7:
-            self.ceruza()
+            self.ceruza() # Fatér László
             return
         if tipus == 8:
-            self.korte()
+            self.korte() # Fellner Milán
             return
         if tipus == 9:
-            self.nap()
+            self.nap() #Troznai Roland
             return
         if tipus == 10:
-            self.gomba()
+            self.gomba() # Zsuppán Flórián
+            return
+        if tipus == 11:
+            self.haziko() # Ekler Dániel
+            return
+        if tipus == 12:
+            self.fa() # Kalamár Rajmund
+            return
+        if tipus == 13:
+            self.letra() # Marcon Tamás
+            return
+        if tipus == 14:
+            self.tv() # Oláh Gergő
             return
 
 
