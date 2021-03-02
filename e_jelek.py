@@ -186,6 +186,7 @@ class Jel:
         self.turtle.forward(80)
 
     def ceruza(self):
+
         for i in range(2):
             self.turtle.forward(30)
             self.turtle.left(90)
@@ -208,7 +209,12 @@ class Jel:
             for g in range(2):
                 self.turtle.forward(20 / 2)
 
-
+        j = Jel
+        s = Szekreny
+        turtle = Turtle
+        screen = Screen
+        s.polc(turtle)
+        j.ceruza()
 
 
     def fa(self):
