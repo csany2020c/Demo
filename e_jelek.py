@@ -59,6 +59,7 @@ class Jel:
 
     def vonat(self):
         s = self
+        s.turtle.forward(-55)
         s.turtle.forward(128)
         s.turtle.left(90)
         s.turtle.forward(32)
