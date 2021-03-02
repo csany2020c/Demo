@@ -189,19 +189,19 @@ class Jel:
     def ceruza(self):
         for i in range(2):
             self.turtle.forward(30)
-            self.turtle.left(90)
-            self.turtle.forward(150)
-            self.turtle.left(90)
+            self.turtle.left(-90)
+            self.turtle.forward(100)
+            self.turtle.left(-90)
             self.turtle.forward(30)
         for a in range(1):
             self.turtle.penup()
-            self.turtle.goto(30, 150)
+            self.turtle.goto(120, 120)
             self.turtle.pendown()
             for b in range(2):
                 self.turtle.right(-120)
                 self.turtle.forward(60)
             self.turtle.penup()
-            self.turtle.goto(0, 200)
+            self.turtle.goto(90, 170)
             self.turtle.forward(20)
             self.turtle.left(120)
             self.turtle.pendown()
