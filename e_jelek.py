@@ -20,24 +20,21 @@ class Jel:
             self.turtle.forward(1)
         self.turtle.end_fill()
 
-    def hajo(self):
+    def hajo(self, width: int = 180, height: int = 240):
         self.turtle.speed()
         #self.screen.setup(width=128, height=128)
         self.turtle.penup()
-        self.turtle.goto(23, -20)
+        self.turtle.goto(height / 2, width / 2)
         self.turtle.pendown()
         self.trapez()
         self.turtle.penup()
-        self.turtle.goto(3, -10)
+        self.turtle.left(145)
+        self.turtle.forward(30)
         self.turtle.pendown()
-        self.turtle.left(-125)
-        self.turtle.penup()
-        self.turtle.goto(-2, 30)
-        self.turtle.pendown()
+        self.turtle.right(95)
         self.turtle.forward(50)
-        self.turtle.penup()
-        self.turtle.goto(-16, 7)
-        self.turtle.pendown()
+        self.turtle.right(120)
+        self.turtle.left(182.5)
         self.triangle()
         #self.screen.mainloop()
 
@@ -394,10 +391,9 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.hold()
+        j.hajo()
 
         self.screen.mainloop()
 
 
 t = TurtleOOP()
-
