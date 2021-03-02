@@ -280,6 +280,60 @@ class Jel:
             self.turtle.left(0.8)
             self.turtle.forward(1.7)
 
+    def haziko(self):
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(50)
+        self.turtle.left(90)
+        self.turtle.forward(25)
+        self.turtle.right(90)
+        self.turtle.forward(10)
+        self.turtle.right(90)
+        self.turtle.forward(25)
+        self.turtle.left(90)
+        self.turtle.forward(20)
+        self.turtle.left(90)
+        self.turtle.penup()
+        self.turtle.forward(40)
+        self.turtle.pendown()
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(10)
+        self.turtle.left(90)
+        self.turtle.forward(15)
+        self.turtle.right(90)
+        self.turtle.forward(5)
+        self.turtle.right(90)
+        self.turtle.forward(5)
+        self.turtle.right(90)
+        self.turtle.forward(15)
+        self.turtle.penup()
+        self.turtle.forward(40)
+        self.turtle.pendown()
+        self.turtle.right(90)
+        self.turtle.forward(70)
+        self.turtle.right(90)
+        self.turtle.forward(100)
+        self.turtle.right(45)
+        self.turtle.forward(75)
+        self.turtle.right(95)
+        self.turtle.forward(75)
+        self.turtle.penup()
+        self.turtle.forward(150)
+        self.turtle.pendown()
+
     def jel(self, tipus: int):
         tipus = tipus % 10
         if tipus == 0:
@@ -315,6 +369,7 @@ class Jel:
         if tipus == 10:
             self.gomba()
             return
+
 
 
 class Szekreny:
