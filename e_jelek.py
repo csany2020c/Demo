@@ -134,7 +134,9 @@ class Jel:
         #self.focilabda(r.randint(10, 50))
 
         self.turtle.penup()
-        self.turtle.goto(-50, -25)
+        self.turtle.forward(125)
+        self.turtle.left(90)
+        self.turtle.forward(150)
         self.turtle.pendown()
 
         for i in range(360):
@@ -400,7 +402,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.domino()
+        j.focilabda(0)
 
         self.screen.mainloop()
 
