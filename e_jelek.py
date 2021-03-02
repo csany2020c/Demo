@@ -206,7 +206,7 @@ class Jel:
 
 
 
-        
+
     def fa(self):
         self.turtle.right(90)
         self.turtle.forward(100)
@@ -221,6 +221,7 @@ class Jel:
             self.turtle.circle(20, 60)
 
     def korte(self, a:int = 10):
+        self.turtle.fillcolor(0,0.8, 0.2)
         self.turtle.begin_fill()
         self.turtle.left(270)
         for i in range(8):
