@@ -476,7 +476,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.domino()
+        j.ceruza()
 
         self.screen.mainloop()
 
