@@ -41,17 +41,6 @@ class Jel:
         self.triangle()
         #self.screen.mainloop()
 
-    def letra(self):
-        self.turtle._delay(0)
-        self.turtle.speed(0)
-        self.turtle.left(90)
-        self.turtle.goto(0, -180)
-        for i in range(7):
-            for i in range(4):
-                self.turtle.forward(40)
-                self.turtle.right(90)
-            self.turtle.forward(40)
-
     def trapez(self):
         self.turtle.left(180)
         self.turtle.forward(50)
@@ -152,7 +141,8 @@ class Jel:
             self.turtle.forward(1)
             self.turtle.left(1)
 
-    def domino(self, a:int = 10):
+    def domino(self, a:int = 100):
+        self.turtle.backward(50)
         for i in range(2):
             self.turtle.forward(a)
             self.turtle.left(90)
@@ -214,6 +204,10 @@ class Jel:
             for g in range(2):
                 self.turtle.forward(20 / 2)
 
+
+
+
+    def fa(self):
         self.turtle.right(90)
         self.turtle.forward(100)
         self.turtle.left(90)
@@ -227,6 +221,7 @@ class Jel:
             self.turtle.circle(20, 60)
 
     def korte(self, a:int = 10):
+        self.turtle.fillcolor(0,0.8, 0.2)
         self.turtle.begin_fill()
         self.turtle.left(270)
         for i in range(8):
@@ -405,7 +400,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.letra()
+        j.domino()
 
         self.screen.mainloop()
 
