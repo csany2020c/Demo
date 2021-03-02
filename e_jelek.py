@@ -185,8 +185,8 @@ class Jel:
         self.turtle.left(120)
         self.turtle.forward(80)
 
-    def ceruza(self):
-
+    def ceruza(self, width: int = 180, height: int = 240):
+        self.turtle.goto(height / 2, width / 2)
         for i in range(2):
             self.turtle.forward(30)
             self.turtle.left(90)
