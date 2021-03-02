@@ -267,6 +267,21 @@ class Jel:
             self.korte()
             return
 
+    def gomba(self):
+        for i in range(4):
+            self.turtle.forward(70)
+            self.turtle.left(90)
+        self.turtle.left(90)
+        self.turtle.forward(70)
+        self.turtle.left(90)
+        self.turtle.forward(70)
+        self.turtle.right(180)
+        self.turtle.forward(210)
+        self.turtle.left(120)
+        for k in range(151):
+            self.turtle.left(0.8)
+            self.turtle.forward(1.7)
+
 
 
 class Szekreny:
