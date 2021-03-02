@@ -141,7 +141,8 @@ class Jel:
             self.turtle.forward(1)
             self.turtle.left(1)
 
-    def domino(self, a:int = 10):
+    def domino(self, a:int = 100):
+        self.turtle.backward(50)
         for i in range(2):
             self.turtle.forward(a)
             self.turtle.left(90)
@@ -394,7 +395,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.hold()
+        j.domino()
 
         self.screen.mainloop()
 
