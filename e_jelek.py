@@ -198,19 +198,19 @@ class Jel:
     def ceruza(self):
         for i in range(2):
             self.turtle.forward(30)
-            self.turtle.left(90)
-            self.turtle.forward(150)
-            self.turtle.left(90)
+            self.turtle.left(-90)
+            self.turtle.forward(100)
+            self.turtle.left(-90)
             self.turtle.forward(30)
         for a in range(1):
             self.turtle.penup()
-            self.turtle.goto(30, 150)
+            self.turtle.goto(159, 75)
             self.turtle.pendown()
             for b in range(2):
                 self.turtle.right(-120)
                 self.turtle.forward(60)
             self.turtle.penup()
-            self.turtle.goto(0, 200)
+            self.turtle.goto(130, 125)
             self.turtle.forward(20)
             self.turtle.left(120)
             self.turtle.pendown()
@@ -288,40 +288,156 @@ class Jel:
             self.turtle.left(0.8)
             self.turtle.forward(1.7)
 
+    def haziko(self):
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(50)
+        self.turtle.left(90)
+        self.turtle.forward(25)
+        self.turtle.right(90)
+        self.turtle.forward(10)
+        self.turtle.right(90)
+        self.turtle.forward(25)
+        self.turtle.left(90)
+        self.turtle.forward(20)
+        self.turtle.left(90)
+        self.turtle.penup()
+        self.turtle.forward(40)
+        self.turtle.pendown()
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(10)
+        self.turtle.left(90)
+        self.turtle.forward(15)
+        self.turtle.right(90)
+        self.turtle.forward(5)
+        self.turtle.right(90)
+        self.turtle.forward(5)
+        self.turtle.right(90)
+        self.turtle.forward(15)
+        self.turtle.penup()
+        self.turtle.forward(40)
+        self.turtle.pendown()
+        self.turtle.right(90)
+        self.turtle.forward(70)
+        self.turtle.right(90)
+        self.turtle.forward(100)
+        self.turtle.right(45)
+        self.turtle.forward(75)
+        self.turtle.right(95)
+        self.turtle.forward(75)
+        self.turtle.penup()
+        self.turtle.forward(150)
+        self.turtle.pendown()
+
+    def tv(self):
+        for i in range(4):
+            self.turtle.forward(100)
+            self.turtle.right(90)
+        self.turtle.forward(100)
+        self.turtle.left(50)
+        self.turtle.forward(60)
+        self.turtle.right(140)
+        self.turtle.forward(110)
+        self.turtle.right(46)
+        self.turtle.forward(53)
+        self.turtle.penup()
+        self.turtle.goto(0, 0)
+        self.turtle.pendown()
+        self.turtle.right(170)
+        self.turtle.forward(56)
+        self.turtle.right(54)
+        self.turtle.forward(108)
+        self.turtle.penup()
+        self.turtle.goto(70, 20)
+        self.turtle.pendown()
+        self.turtle.left(50)
+        self.turtle.forward(100)
+        self.turtle.penup()
+        self.turtle.goto(70, 20)
+        self.turtle.pendown()
+        self.turtle.left(67)
+        self.turtle.forward(100)
+        self.turtle.penup()
+        self.turtle.goto(11, -21)
+        self.turtle.right(117)
+        self.turtle.pendown()
+        for i in range(4):
+            self.turtle.forward(64)
+            self.turtle.right(90)
+        self.turtle.penup()
+        self.turtle.goto(87, -34)
+        self.turtle.pendown()
+        self.turtle.fillcolor('black')
+        self.turtle.begin_fill()
+        self.turtle.circle(6)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.goto(87, -82)
+        self.turtle.pendown()
+        self.turtle.fillcolor('black')
+        self.turtle.begin_fill()
+        self.turtle.circle(6)
+        self.turtle.end_fill()
+
     def jel(self, tipus: int):
         tipus = tipus % 10
         if tipus == 0:
-            self.hold()
+            self.hold() #Márkus Bence
             return
         if tipus == 1:
-            self.hajo()
+            self.hajo() # Csongor
             return
         if tipus == 2:
-            self.vonat()
+            self.vonat() # Loránd
             return
         if tipus == 3:
-            self.gyertya()
+            self.gyertya() #Zsebők Dávid
             return
         if tipus == 4:
-            self.focilabda(1)
+            self.focilabda(1) # Németh Csaba Bence
             return
         if tipus == 5:
-            self.domino()
+            self.domino() # Kancsal Máté
             return
         if tipus == 6:
-            self.cseresznye()
+            self.cseresznye() # Horváth Boldizsár
             return
         if tipus == 7:
-            self.ceruza()
+            self.ceruza() # Fatér László
             return
         if tipus == 8:
-            self.korte()
+            self.korte() # Fellner Milán
             return
         if tipus == 9:
-            self.nap()
+            self.nap() #Troznai Roland
             return
         if tipus == 10:
-            self.gomba()
+            self.gomba() # Zsuppán Flórián
+            return
+        if tipus == 11:
+            self.haziko() # Ekler Dániel
+            return
+        if tipus == 12:
+            self.fa() # Kalamár Rajmund
+            return
+        if tipus == 13:
+            self.letra() # Marcon Tamás
+            return
+        if tipus == 14:
+            self.tv() # Oláh Gergő
             return
 
 
