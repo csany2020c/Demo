@@ -396,9 +396,10 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.hajo()
+        j.domino()
 
         self.screen.mainloop()
+
 
 #t = TurtleOOP()
 
