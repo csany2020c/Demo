@@ -334,6 +334,56 @@ class Jel:
         self.turtle.forward(150)
         self.turtle.pendown()
 
+    def tv(self):
+        for i in range(4):
+            self.turtle.forward(100)
+            self.turtle.right(90)
+        self.turtle.forward(100)
+        self.turtle.left(50)
+        self.turtle.forward(60)
+        self.turtle.right(140)
+        self.turtle.forward(110)
+        self.turtle.right(46)
+        self.turtle.forward(53)
+        self.turtle.penup()
+        self.turtle.goto(0, 0)
+        self.turtle.pendown()
+        self.turtle.right(170)
+        self.turtle.forward(56)
+        self.turtle.right(54)
+        self.turtle.forward(108)
+        self.turtle.penup()
+        self.turtle.goto(70, 20)
+        self.turtle.pendown()
+        self.turtle.left(50)
+        self.turtle.forward(100)
+        self.turtle.penup()
+        self.turtle.goto(70, 20)
+        self.turtle.pendown()
+        self.turtle.left(67)
+        self.turtle.forward(100)
+        self.turtle.penup()
+        self.turtle.goto(11, -21)
+        self.turtle.right(117)
+        self.turtle.pendown()
+        for i in range(4):
+            self.turtle.forward(64)
+            self.turtle.right(90)
+        self.turtle.penup()
+        self.turtle.goto(87, -34)
+        self.turtle.pendown()
+        self.turtle.fillcolor('black')
+        self.turtle.begin_fill()
+        self.turtle.circle(6)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.goto(87, -82)
+        self.turtle.pendown()
+        self.turtle.fillcolor('black')
+        self.turtle.begin_fill()
+        self.turtle.circle(6)
+        self.turtle.end_fill()
+
     def jel(self, tipus: int):
         tipus = tipus % 10
         if tipus == 0:
@@ -369,7 +419,6 @@ class Jel:
         if tipus == 10:
             self.gomba()
             return
-
 
 
 class Szekreny:
