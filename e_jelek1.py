@@ -134,26 +134,72 @@ class Jel:
         self.turtle.circle(16, -160)
         self.turtle.end_fill()
 
-    def focilabda(self, a: int):
-        r = Random()
-        for i in range(5):
-            self.turtle.forward(10)
-            self.turtle.left(70)
-        for j in range(5):
-            self.turtle.penup()
-            #self.turtle.goto(r.randint(-30, 20), r.randint(-30, 20))
-            self.turtle.pendown()
-        #self.focilabda(r.randint(10, 50))
-
+    def focilabda(self):
         self.turtle.penup()
-        self.turtle.forward(125)
+        self.turtle.right(90)
+        self.turtle.forward(50)
         self.turtle.left(90)
-        self.turtle.forward(150)
         self.turtle.pendown()
-
+        self.turtle.begin_fill()
+        self.turtle.color('white')
         for i in range(360):
             self.turtle.forward(1)
             self.turtle.left(1)
+        self.turtle.end_fill()
+        self.turtle.left(135)
+        self.turtle.penup()
+        self.turtle.forward(10)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        self.turtle.color('red')
+        for i in range(5):
+            self.turtle.forward(13)
+            self.turtle.right(75)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.forward(50)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        for i in range(5):
+            self.turtle.forward(13)
+            self.turtle.right(75)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.right(90)
+        self.turtle.forward(30)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        for i in range(5):
+            self.turtle.forward(13)
+            self.turtle.right(75)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.right(45)
+        self.turtle.forward(30)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        for i in range(5):
+            self.turtle.forward(13)
+            self.turtle.right(75)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.right(180)
+        self.turtle.forward(50)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        for i in range(5):
+            self.turtle.forward(13)
+            self.turtle.right(75)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.right(125)
+        self.turtle.forward(35)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        for i in range(5):
+            self.turtle.forward(13)
+            self.turtle.right(75)
+        self.turtle.end_fill()
 
     def domino(self, a:int = 100):
         self.turtle.backward(50)
