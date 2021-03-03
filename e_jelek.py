@@ -197,7 +197,7 @@ class Jel:
 
     def ceruza(self):
         for i in range(2):
-            self.turtle.fillcolor(0.8, 0.2, 0)
+            self.turtle.fillcolor(0.8, 0.1, 0)
             self.turtle.begin_fill()
             self.turtle.forward(30)
             self.turtle.left(-90)
@@ -205,10 +205,14 @@ class Jel:
             self.turtle.left(-90)
             self.turtle.forward(30)
             self.turtle.end_fill()
+            self.turtle.begin_fill()
         for a in range(1):
             self.turtle.penup()
+            self.turtle.end_fill()
             self.turtle.goto(159, 75)
             self.turtle.pendown()
+            self.turtle.end_fill()
+            self.turtle.begin_fill()
             for b in range(2):
                 self.turtle.right(-120)
                 self.turtle.forward(60)
@@ -220,6 +224,7 @@ class Jel:
 
             for g in range(2):
                 self.turtle.forward(20 / 2)
+            self.turtle.end_fill()
 
     def letra(self):
         self.turtle.left(90)
