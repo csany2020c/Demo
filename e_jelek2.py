@@ -22,3 +22,6 @@ class Jel:
         self.turtle.right(30)
         self.turtle.forward(20)
 
+    def fenyoag (self):
+
+
