@@ -1,4 +1,3 @@
-from e_szekreny import *
 from e_jelek1 import *
 
 
@@ -9,6 +8,5 @@ turtle.speed(0)
 j = Jel(turtle)
 s = Szekreny(turtle)
 s.polc()
-j.hajo()
-j.ceruza()
+j.focilabda(0)
 screen.mainloop()
