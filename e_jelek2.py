@@ -7,8 +7,6 @@ class Jel:
     turtle: Turtle
     screen = Screen()
 
-
-
     def __init__(self, turtle: Turtle):
         self.turtle = turtle
 
