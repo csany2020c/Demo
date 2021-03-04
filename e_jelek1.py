@@ -364,6 +364,13 @@ class Jel:
             self.turtle.forward(1.7)
 
     def haziko(self):
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(55)
+        self.turtle.left(90)
+        self.turtle.forward(60)
+        self.turtle.left(90)
+        self.turtle.pendown()
         self.turtle.forward(100)
         self.turtle.left(90)
         self.turtle.forward(100)
