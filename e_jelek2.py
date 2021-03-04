@@ -18,7 +18,28 @@ class Jel:
         #     return
 
     def mintajel(self):
-        self.turtle.forward(20)
-        self.turtle.right(30)
-        self.turtle.forward(20)
+        for i in range(82):
+            self.turtle.forward(1)
+            self.turtle.right(10)
 
+        self.turtle.left(95)
+        self.turtle.forward(50)
+
+        for i in range(82):
+            self.turtle.forward(1)
+            self.turtle.right(10)
+
+        self.turtle.left(180)
+        self.turtle.forward(20)
+        self.turtle.left(90)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(20)
+        self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.left(90)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(15)
+        self.turtle.left(90)
+        self.turtle.forward(25)
