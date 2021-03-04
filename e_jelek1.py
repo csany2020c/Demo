@@ -63,7 +63,9 @@ class Jel:
 
     def vonat(self):
         s = self
-        s.turtle.forward(-45)
+        s.turtle.begin_fill()
+        s.turtle.fillcolor("lightblue")
+        s.turtle.forward(-60)
         s.turtle.forward(128)
         s.turtle.left(90)
         s.turtle.forward(32)
@@ -83,22 +85,30 @@ class Jel:
         s.turtle.forward(32)
         s.turtle.left(90)
         s.turtle.forward(64)
+        s.turtle.end_fill()
+        s.turtle.fillcolor("black")
+        s.turtle.begin_fill()
         for i in range(180):
             s.turtle.forward(0.3)
             s.turtle.left(1)
+        s.turtle.end_fill()
         s.turtle.right(90)
         s.turtle.forward(8)
         s.turtle.right(90)
+        s.turtle.begin_fill()
         for i in range(180):
             s.turtle.forward(0.3)
             s.turtle.left(1)
+        s.turtle.end_fill()
+        s.turtle.end_fill()
         s.turtle.right(90)
         s.turtle.forward(8)
         s.turtle.right(90)
+        s.turtle.begin_fill()
         for i in range(180):
             s.turtle.forward(0.3)
             s.turtle.left(1)
-
+        s.turtle.end_fill()
     def gyertya(self):
         self.turtle.setheading(90)
         self.turtle.penup()
