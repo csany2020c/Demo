@@ -104,8 +104,6 @@ class Jel:
         self.turtle.forward(10)
         self.turtle.left(45)
         self.turtle.forward(20)
-        self.turtle.pendown()
-        self.turtle.circle(23)
         for i in range(2):
             self.turtle.penup()
             self.turtle.backward(20)
@@ -196,6 +194,16 @@ class Jel:
 
         self.turtle.left(60)
         self.turtle.forward(20)
+    def gyongysor(self):
+        self.turtle.penup()
+        self.turtle.goto(170, 130)
+        self.turtle.setheading(225)
+        self.turtle.pendown()
+        for i in range(90):
+            self.turtle.forward(2)
+            self.turtle.right(1)
+
+        self.turtle.fillcolor("red")
 
     def kifli(self):
         self.turtle.width(2)
@@ -280,4 +288,27 @@ class Jel:
         self.turtle.penup()
         self.turtle.forward(600)
 
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(135, 105)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
 
+        self.turtle.fillcolor("blue")
+
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(100, 100)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("yellow")
+
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(65, 105)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
