@@ -302,28 +302,3 @@ class Jel:
         self.turtle.end_fill()
         self.turtle.penup()
         self.turtle.forward(600)
-
-        self.turtle.begin_fill()
-        self.turtle.penup()
-        self.turtle.goto(135, 105)
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
-
-        self.turtle.fillcolor("blue")
-
-        self.turtle.begin_fill()
-        self.turtle.penup()
-        self.turtle.goto(100, 100)
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
-
-        self.turtle.fillcolor("yellow")
-
-        self.turtle.begin_fill()
-        self.turtle.penup()
-        self.turtle.goto(65, 105)
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
