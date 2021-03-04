@@ -17,4 +17,5 @@ turtle.left(90)
 
 turtle.pendown()
 j.haziko()
+j.focilabda(0)
 screen.mainloop()

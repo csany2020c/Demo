@@ -1,4 +1,4 @@
-from e_jelek import *
+from e_szekreny1 import *
 
 
 class TurtleOOP:
@@ -15,7 +15,7 @@ class TurtleOOP:
         self.turtle._delay(0)
         self.turtle.speed(0)
         self.turtle.penup()
-        sz = Szekreny(self.turtle)
+        sz = Szekreny1(self.turtle)
 
         self.turtle.goto(self.left, self.bottom)
         sz.szekreny(5, 3)
