@@ -34,6 +34,53 @@ class Jel:
             self.kifli() # Konczik Ádám
             return
 
+
+    def fenyoag (self):
+        for i in range(20):
+            self.turtle.color("brown")
+            self.turtle.forward(3)
+            self.turtle.left(2)
+            self.turtle.color("green")
+            self.turtle.right(90)
+            self.turtle.left(45)
+            self.turtle.forward(10)
+            self.turtle.backward(10)
+            self.turtle.right(90)
+            self.turtle.backward(10)
+            self.turtle.forward(10)
+            self.turtle.left(135)
+
+
+
+
+
+
+
+
+
+
+
+        tipus = tipus % 6
+
+        if tipus == 0:
+            self.fenyofa() # Fekete Félix
+            return
+        if tipus == 1:
+            self.katica() # Horváth Márk
+            return
+        if tipus == 2:
+            self.kocsi() # Szabó Bálint
+            return
+        if tipus == 3:
+            self.pottyoslabda() # Kollár Bálint
+            return
+        if tipus == 4:
+            self.gyongysor() # Mándli Ivett
+            return
+        if tipus == 5:
+            self.kifli() # Konczik Ádám
+            return
+
     def fagyi(self):
         self.turtle.right(110)
         self.turtle.forward(50)
@@ -53,6 +100,75 @@ class Jel:
         # self.turtle.forward(20)
         # self.turtle.right(30)
         # self.turtle.forward(20)
+
+
+    def fenyofa(self):
+        self.turtle.right(120)
+        self.turtle.forward(40)
+        self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.left(70)
+        self.turtle.forward(34)
+        self.turtle.right(210)
+        self.turtle.forward(70)
+        self.turtle.left(180)
+        self.turtle.forward(120)
+        self.turtle.left(130)
+        self.turtle.forward(30)
+        self.turtle.right(240)
+        self.turtle.forward(25)
+        self.turtle.left(70)
+        self.turtle.forward(30)
+        self.turtle.left(120)
+        self.turtle.forward(25)
+
+    def ellipse(self, x1: float, y1: float, x2: float, y2: float):
+        # double t, a, b, tinc, centx, centy;
+        a = abs(0.5 * (x2 - x1))
+        b = abs(0.5 * (y2 - y1))
+        tinc = pi * 2 / (a + b)
+        centx = ((x1 + x2) + .5) * .5
+        centy = ((y1 + y2) + .5) * .5
+        self.turtle.goto(centx + a, centy)
+        t = 0
+        while t < pi * 2:
+            self.turtle.goto(centx + a * cos(t), centy - b * sin(t))
+            t = t + tinc
+    def katica(self):
+        self.turtle.penup()
+        self.turtle.right(125)
+        self.turtle.forward(50)
+        self.turtle.left(125)
+        self.turtle.pendown()
+        self.turtle.fillcolor("red")
+        self.turtle.begin_fill()
+        self.turtle.circle(75, 90)
+        self.turtle.circle(25, 90)
+        self.turtle.circle(75, 90)
+        self.turtle.circle(25, 90)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.circle(75, 90)
+        self.turtle.right(90)
+        self.turtle.pendown()
+        self.turtle.fillcolor("black")
+    def mintajel(self):
+        for i in range(82):
+            self.turtle.forward(1)
+            self.turtle.right(10)
+
+        self.turtle.left(95)
+        self.turtle.forward(50)
+
+        for i in range(82):
+            self.turtle.forward(1)
+            self.turtle.right(10)
+
+        self.turtle.left(180)
+        self.turtle.forward(20)
+        self.turtle.left(90)
 
 
     def fenyofa(self):

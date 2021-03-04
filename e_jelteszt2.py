@@ -11,16 +11,9 @@ s = Szekreny(turtle)
 
 s.polc()
 j = Jel(turtle)
-# j.mintajel()
-j.ellipse(10,20,300,100)
-j.mintajel()
-s.polc()
-j.kocsi()
-
-j.gyongysor()
+j.fenyoag()
 
 # turtle.left(270)
 # turtle.forward(200)
 # s.polc()
-
 screen.mainloop()

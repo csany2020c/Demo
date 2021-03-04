@@ -7,6 +7,8 @@ turtle._delay(0)
 turtle.speed(0)
 j = Jel(turtle)
 s = Szekreny(turtle)
+
 s.polc()
-j.focilabda(0)
+j.haziko()
+
 screen.mainloop()
