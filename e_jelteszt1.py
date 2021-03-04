@@ -1,4 +1,4 @@
-from e_jelek import *
+from e_jelek1 import *
 
 
 turtle = Turtle()

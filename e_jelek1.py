@@ -2,6 +2,8 @@ from turtle import Turtle
 from turtle import Screen
 from random import Random
 
+from e_szekreny import Szekreny
+
 
 class Jel:
     turtle: Turtle
@@ -344,6 +346,7 @@ class Jel:
         for i in range(25):
             self.turtle.forward(128)
             self.turtle.left(165)
+        self.turtle.color('black')
 
     def gomba(self):
         for i in range(4):
@@ -534,10 +537,9 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.hajo(0)
+        j.nap()
 
         self.screen.mainloop()
-
 
 t = TurtleOOP()
 
