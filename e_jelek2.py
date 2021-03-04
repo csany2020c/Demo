@@ -179,6 +179,7 @@ class Jel:
 
         self.turtle.left(60)
         self.turtle.forward(20)
+
     def gyongysor(self):
         self.turtle.penup()
         self.turtle.goto(170, 130)
@@ -189,6 +190,31 @@ class Jel:
             self.turtle.right(1)
 
         self.turtle.fillcolor("red")
+
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(135, 105)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("blue")
+
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(100, 100)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("yellow")
+
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(65, 105)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
 
     def kifli(self):
         self.turtle.width(2)
