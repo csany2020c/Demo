@@ -23,29 +23,6 @@ class Jel:
         # self.turtle.right(30)
         # self.turtle.forward(20)
 
-
-    def fenyofa(self):
-        self.turtle.right(120)
-        self.turtle.forward(40)
-        self.turtle.left(90)
-        self.turtle.forward(30)
-        self.turtle.left(90)
-        self.turtle.forward(30)
-        self.turtle.left(70)
-        self.turtle.forward(34)
-        self.turtle.right(210)
-        self.turtle.forward(70)
-        self.turtle.left(180)
-        self.turtle.forward(120)
-        self.turtle.left(130)
-        self.turtle.forward(30)
-        self.turtle.right(240)
-        self.turtle.forward(25)
-        self.turtle.left(70)
-        self.turtle.forward(30)
-        self.turtle.left(120)
-        self.turtle.forward(25)
-
     def ellipse(self, x1: float, y1: float, x2: float, y2: float):
         # double t, a, b, tinc, centx, centy;
         a = abs(0.5 * (x2 - x1))
@@ -179,5 +156,30 @@ class Jel:
 
         self.turtle.left(60)
         self.turtle.forward(20)
+
+
+
+
+    def fenyofa(self):
+            self.turtle.right(120)
+            self.turtle.forward(40)
+            self.turtle.left(90)
+            self.turtle.forward(30)
+            self.turtle.left(90)
+            self.turtle.forward(30)
+            self.turtle.left(70)
+            self.turtle.forward(34)
+            self.turtle.right(210)
+            self.turtle.forward(70)
+            self.turtle.left(180)
+            self.turtle.forward(120)
+            self.turtle.left(130)
+            self.turtle.forward(30)
+            self.turtle.right(240)
+            self.turtle.forward(25)
+            self.turtle.left(70)
+            self.turtle.forward(30)
+            self.turtle.left(120)
+            self.turtle.forward(25)
 
 
