@@ -34,21 +34,25 @@ class Jel:
             self.kifli() # Konczik Ádám
             return
 
-    def mintajel(self):
-        for i in range(82):
-            self.turtle.forward(1)
-            self.turtle.right(10)
-
-        self.turtle.left(95)
+    def fagyi(self):
+        self.turtle.right(110)
         self.turtle.forward(50)
-
-        for i in range(82):
-            self.turtle.forward(1)
-            self.turtle.right(10)
-
-        self.turtle.left(180)
-        self.turtle.forward(20)
-        self.turtle.left(90)
+        self.turtle.right(150)
+        self.turtle.forward(50)
+        self.turtle.right(105)
+        self.turtle.forward(25)
+        self.turtle.circle(23)
+        self.turtle.penup()
+        self.turtle.left(80)
+        self.turtle.forward(10)
+        self.turtle.pendown()
+        self.turtle.circle(23)
+        self.turtle.penup()
+        self.turtle.right(11)
+    # def mintajel(self):
+        # self.turtle.forward(20)
+        # self.turtle.right(30)
+        # self.turtle.forward(20)
 
 
     def fenyofa(self):
@@ -334,3 +338,19 @@ class Jel:
         self.turtle.end_fill()
         self.turtle.penup()
         self.turtle.forward(600)
+
+    def kocsi2(self):
+        for i in range(82):
+            self.turtle.forward(1)
+            self.turtle.right(10)
+
+        self.turtle.left(95)
+        self.turtle.forward(50)
+
+        for i in range(82):
+            self.turtle.forward(1)
+            self.turtle.right(10)
+
+        self.turtle.left(180)
+        self.turtle.forward(20)
+        self.turtle.left(90)
