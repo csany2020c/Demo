@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\dell\PycharmProjects\Demos\venv"
+VIRTUAL_ENV="C:\Users\Windows 10 Pro\PycharmProjects\Demo\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
