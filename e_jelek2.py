@@ -17,8 +17,22 @@ class Jel:
         #     self.hold() #Márkus Bence
         #     return
 
-    def mintajel(self):
+    def fagyi(self):
+        self.turtle.right(110)
+        self.turtle.forward(50)
+        self.turtle.right(150)
+        self.turtle.forward(50)
+        self.turtle.right(105)
+        self.turtle.forward(25)
+        self.turtle.circle(20)
+        self.turtle.penup()
+        self.turtle.left(80)
+        self.turtle.forward(10)
+        self.turtle.pendown()
+        self.turtle.circle(20)
+        self.turtle.penup()
+        self.turtle.right(10)
         self.turtle.forward(20)
-        self.turtle.right(30)
-        self.turtle.forward(20)
+        self.turtle.pendown()
+        self.turtle.circle(20)
 
