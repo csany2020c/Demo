@@ -13,11 +13,20 @@ class Jel:
 
 
     def jel(self, tipus: int):
-        tipus = tipus % 10
-        # if tipus == 0:
-        #     self.hold() #Márkus Bence
-        #     return
+        tipus = tipus % 4
 
+        if tipus == 0:
+            self.fenyofa() # Fekete Félix
+            return
+        if tipus == 1:
+            self.katica() # Horváth Márk
+            return
+        if tipus == 2:
+            self.kocsi() # Szabó Bálint
+            return
+        if tipus == 3:
+            self.pottyoslabda() # Kollár Bálint
+            return
     # def mintajel(self):
         # self.turtle.forward(20)
         # self.turtle.right(30)
