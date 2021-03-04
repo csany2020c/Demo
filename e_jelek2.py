@@ -17,11 +17,31 @@ class Jel:
         #     self.hold() #Márkus Bence
         #     return
 
-    def mintajel(self):
-        self.turtle.forward(20)
-        self.turtle.right(30)
-        self.turtle.forward(20)
 
     def fenyoag (self):
+        for i in range(20):
+            self.turtle.color("brown")
+            self.turtle.forward(3)
+            self.turtle.left(2)
+            self.turtle.color("green")
+            self.turtle.right(90)
+            self.turtle.left(45)
+            self.turtle.forward(10)
+            self.turtle.backward(10)
+            self.turtle.right(90)
+            self.turtle.backward(10)
+            self.turtle.forward(10)
+            self.turtle.left(135)
+
+
+
+
+
+
+
+
+
+
+
 
 
