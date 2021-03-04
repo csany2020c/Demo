@@ -22,8 +22,6 @@ class Jel:
         self.turtle.right(30)
         self.turtle.forward(20)
 
-
-
     def pottyoslabda(self):
         self.turtle.penup()
         self.turtle.right(180)
@@ -36,7 +34,6 @@ class Jel:
             self.turtle.forward(1)
             self.turtle.left(1)
             self.turtle.end_fill()
-
 
         self.turtle.penup()
         self.turtle.left(90)
@@ -83,5 +80,5 @@ class Jel:
         self.turtle.circle(10)
         self.turtle.end_fill()
         self.turtle.penup()
-        self.turtle.forward(500)
+        self.turtle.forward(600)
 
