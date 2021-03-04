@@ -7,8 +7,9 @@ screen = Screen()
 turtle._delay(0)
 turtle.speed(0)
 s = Szekreny(turtle)
-s.polc()
+# s.polc()
 
+s.polc()
 j = Jel(turtle)
 j.fenyoag()
 
