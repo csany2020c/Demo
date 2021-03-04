@@ -339,6 +339,8 @@ class Jel:
         self.turtle.left(180)
 
     def nap(self):
+        self.turtle.backward(64)
+        self.turtle.color('yellow')
         for i in range(25):
             self.turtle.forward(128)
             self.turtle.left(165)
