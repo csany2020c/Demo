@@ -13,10 +13,26 @@ class Jel:
 
 
     def jel(self, tipus: int):
-        tipus = tipus % 10
-        # if tipus == 0:
-        #     self.hold() #Márkus Bence
-        #     return
+        tipus = tipus % 6
+
+        if tipus == 0:
+            self.fenyofa() # Fekete Félix
+            return
+        if tipus == 1:
+            self.katica() # Horváth Márk
+            return
+        if tipus == 2:
+            self.kocsi() # Szabó Bálint
+            return
+        if tipus == 3:
+            self.pottyoslabda() # Kollár Bálint
+            return
+        if tipus == 4:
+            self.gyongysor() # Mándli Ivett
+            return
+        if tipus == 5:
+            self.kifli() # Konczik Ádám
+            return
 
     def mintajel(self):
         for i in range(82):
@@ -33,10 +49,6 @@ class Jel:
         self.turtle.left(180)
         self.turtle.forward(20)
         self.turtle.left(90)
-    # def mintajel(self):
-        # self.turtle.forward(20)
-        # self.turtle.right(30)
-        # self.turtle.forward(20)
 
 
     def fenyofa(self):
@@ -296,28 +308,3 @@ class Jel:
         self.turtle.end_fill()
         self.turtle.penup()
         self.turtle.forward(600)
-
-        self.turtle.begin_fill()
-        self.turtle.penup()
-        self.turtle.goto(135, 105)
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
-
-        self.turtle.fillcolor("blue")
-
-        self.turtle.begin_fill()
-        self.turtle.penup()
-        self.turtle.goto(100, 100)
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
-
-        self.turtle.fillcolor("yellow")
-
-        self.turtle.begin_fill()
-        self.turtle.penup()
-        self.turtle.goto(65, 105)
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
