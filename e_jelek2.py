@@ -32,7 +32,7 @@ class Jel:
         self.turtle.pendown()
         self.turtle.circle(23)
         self.turtle.penup()
-        self.turtle.right(10)
+        self.turtle.right(11)
     # def mintajel(self):
         # self.turtle.forward(20)
         # self.turtle.right(30)
