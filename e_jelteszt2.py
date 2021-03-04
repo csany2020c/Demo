@@ -7,9 +7,16 @@ screen = Screen()
 turtle._delay(0)
 turtle.speed(0)
 s = Szekreny(turtle)
-s.polc()
+# s.polc()
 
+s.polc()
 j = Jel(turtle)
+# j.mintajel()
+j.ellipse(10,20,300,100)
+j.mintajel()
+s.polc()
+j.kocsi()
+
 j.gyongysor()
 
 # turtle.left(270)
