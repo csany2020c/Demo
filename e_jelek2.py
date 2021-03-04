@@ -1,6 +1,7 @@
 from turtle import Turtle
 from turtle import Screen
 from random import Random
+from math import *
 
 
 class Jel:
@@ -12,10 +13,26 @@ class Jel:
 
 
     def jel(self, tipus: int):
-        tipus = tipus % 10
-        # if tipus == 0:
-        #     self.hold() #Márkus Bence
-        #     return
+        tipus = tipus % 6
+
+        if tipus == 0:
+            self.fenyofa() # Fekete Félix
+            return
+        if tipus == 1:
+            self.katica() # Horváth Márk
+            return
+        if tipus == 2:
+            self.kocsi() # Szabó Bálint
+            return
+        if tipus == 3:
+            self.pottyoslabda() # Kollár Bálint
+            return
+        if tipus == 4:
+            self.gyongysor() # Mándli Ivett
+            return
+        if tipus == 5:
+            self.kifli() # Konczik Ádám
+            return
 
 
     def fenyoag (self):
@@ -208,3 +225,142 @@ class Jel:
         self.turtle.right(90)
         self.turtle.forward(20)
 
+        for i in range(15):
+            self.turtle.left(3)
+            self.turtle.forward(1)
+
+        for i in range(35):
+            self.turtle.right(3)
+            self.turtle.forward(1)
+
+        self.turtle.left(60)
+        self.turtle.forward(40)
+
+        for i in range(15):
+            self.turtle.left(3)
+            self.turtle.forward(1)
+
+        for i in range(35):
+            self.turtle.right(3)
+            self.turtle.forward(1)
+
+        self.turtle.left(60)
+        self.turtle.forward(20)
+    def gyongysor(self):
+        self.turtle.penup()
+        self.turtle.goto(170, 130)
+        self.turtle.setheading(225)
+        self.turtle.pendown()
+        for i in range(90):
+            self.turtle.forward(2)
+            self.turtle.right(1)
+
+        self.turtle.fillcolor("red")
+
+    def kifli(self):
+        self.turtle.width(2)
+        self.turtle.fillcolor("#c9b75b")
+        self.turtle.begin_fill()
+        self.turtle.left(50)
+        self.turtle.forward(100)
+        for i in range(12):
+            self.turtle.left(15)
+            self.turtle.forward(3)
+        for i in range(1):
+            self.turtle.forward(100)
+        for i in range(12):
+            self.turtle.left(15)
+            self.turtle.forward(3)
+        self.turtle.end_fill()
+        for i in range(1):
+            self.turtle.forward(15)
+            self.turtle.left(50)
+            self.turtle.forward(29)
+            self.turtle.right(50)
+            self.turtle.forward(45)
+            self.turtle.right(125)
+            self.turtle.forward(30)
+    def pottyoslabda(self):
+        self.turtle.penup()
+        self.turtle.right(180)
+        self.turtle.forward(60)
+        self.turtle.left(90)
+        for i in range(360):
+            self.turtle.begin_fill()
+            self.turtle.color('red')
+            self.turtle.pendown()
+            self.turtle.forward(1)
+            self.turtle.left(1)
+            self.turtle.end_fill()
+
+        self.turtle.penup()
+        self.turtle.left(90)
+        self.turtle.forward(60)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        self.turtle.color('white')
+        self.turtle.circle(10)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(35)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        self.turtle.color('white')
+        self.turtle.circle(10)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(45)
+        self.turtle.right(90)
+        self.turtle.forward(25)
+        self.turtle.pendown()
+        self.turtle.begin_fill()
+        self.turtle.color('white')
+        self.turtle.circle(10)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(65)
+        self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.begin_fill()
+        self.turtle.color('white')
+        self.turtle.circle(10)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.right(180)
+        self.turtle.forward(40)
+        self.turtle.right(90)
+        self.turtle.forward(10)
+        self.turtle.begin_fill()
+        self.turtle.color('white')
+        self.turtle.circle(10)
+        self.turtle.end_fill()
+        self.turtle.penup()
+        self.turtle.forward(600)
+
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(135, 105)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("blue")
+
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(100, 100)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("yellow")
+
+        self.turtle.begin_fill()
+        self.turtle.penup()
+        self.turtle.goto(65, 105)
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()

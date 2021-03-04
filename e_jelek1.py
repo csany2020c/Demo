@@ -468,7 +468,7 @@ class Jel:
         self.turtle.end_fill()
 
     def jel(self, tipus: int):
-        tipus = tipus % 10
+        tipus = tipus % 15
         if tipus == 0:
             self.hold() #Márkus Bence
             return
