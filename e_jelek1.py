@@ -361,19 +361,27 @@ class Jel:
         self.turtle.color('black')
 
     def gomba(self):
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(-50)
+        self.turtle.right(90)
+        self.turtle.forward(-10)
+        self.turtle.pendown()
         for i in range(4):
             self.turtle.forward(70)
             self.turtle.left(90)
         self.turtle.left(90)
         self.turtle.forward(70)
         self.turtle.left(90)
-        self.turtle.forward(70)
+        self.turtle.forward(35)
         self.turtle.right(180)
-        self.turtle.forward(210)
+        self.turtle.forward(140)
         self.turtle.left(120)
-        for k in range(151):
-            self.turtle.left(0.8)
-            self.turtle.forward(1.7)
+        for k in range(172):
+            self.turtle.left(0.7)
+            self.turtle.forward(1)
 
     def haziko(self):
         self.turtle.penup()
@@ -556,7 +564,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.letra()
+        j.gomba()
 
         self.screen.mainloop()
 
