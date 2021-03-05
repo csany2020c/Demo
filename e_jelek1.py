@@ -509,7 +509,7 @@ class Jel:
             self.gyertya() #Zsebők Dávid
             return
         if tipus == 4:
-            self.focilabda(1) # Németh Csaba Bence
+            self.focilabda() # Németh Csaba Bence
             return
         if tipus == 5:
             self.domino() # Kancsal Máté
