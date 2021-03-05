@@ -2,6 +2,8 @@ from turtle import Turtle
 from turtle import Screen
 from random import Random
 
+from e_szekreny import Szekreny
+
 
 class Jel:
     turtle: Turtle
@@ -61,7 +63,9 @@ class Jel:
 
     def vonat(self):
         s = self
-        s.turtle.forward(-45)
+        s.turtle.begin_fill()
+        s.turtle.fillcolor("lightblue")
+        s.turtle.forward(-60)
         s.turtle.forward(128)
         s.turtle.left(90)
         s.turtle.forward(32)
@@ -81,22 +85,30 @@ class Jel:
         s.turtle.forward(32)
         s.turtle.left(90)
         s.turtle.forward(64)
+        s.turtle.end_fill()
+        s.turtle.fillcolor("black")
+        s.turtle.begin_fill()
         for i in range(180):
             s.turtle.forward(0.3)
             s.turtle.left(1)
+        s.turtle.end_fill()
         s.turtle.right(90)
         s.turtle.forward(8)
         s.turtle.right(90)
+        s.turtle.begin_fill()
         for i in range(180):
             s.turtle.forward(0.3)
             s.turtle.left(1)
+        s.turtle.end_fill()
+        s.turtle.end_fill()
         s.turtle.right(90)
         s.turtle.forward(8)
         s.turtle.right(90)
+        s.turtle.begin_fill()
         for i in range(180):
             s.turtle.forward(0.3)
             s.turtle.left(1)
-
+        s.turtle.end_fill()
     def gyertya(self):
         self.turtle.setheading(90)
         self.turtle.penup()
@@ -290,11 +302,13 @@ class Jel:
 
     def letra(self):
         self.turtle.left(90)
+        self.turtle.color("saddlebrown")
+        self.turtle.back(100)
         for i in range(7):
             for i in range(4):
-                self.turtle.forward(40)
+                self.turtle.forward(30)
                 self.turtle.right(90)
-            self.turtle.forward(40)
+            self.turtle.forward(30)
 
     def fa(self):
         self.turtle.right(90)
@@ -339,26 +353,44 @@ class Jel:
         self.turtle.left(180)
 
     def nap(self):
+        self.turtle.backward(64)
+        self.turtle.color('yellow')
         for i in range(25):
             self.turtle.forward(128)
             self.turtle.left(165)
+        self.turtle.color('black')
 
     def gomba(self):
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(-50)
+        self.turtle.right(90)
+        self.turtle.forward(-10)
+        self.turtle.pendown()
         for i in range(4):
             self.turtle.forward(70)
             self.turtle.left(90)
         self.turtle.left(90)
         self.turtle.forward(70)
         self.turtle.left(90)
-        self.turtle.forward(70)
+        self.turtle.forward(35)
         self.turtle.right(180)
-        self.turtle.forward(210)
+        self.turtle.forward(140)
         self.turtle.left(120)
-        for k in range(151):
-            self.turtle.left(0.8)
-            self.turtle.forward(1.7)
+        for k in range(172):
+            self.turtle.left(0.7)
+            self.turtle.forward(1)
 
     def haziko(self):
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(55)
+        self.turtle.left(90)
+        self.turtle.forward(60)
+        self.turtle.left(90)
+        self.turtle.pendown()
         self.turtle.forward(100)
         self.turtle.left(90)
         self.turtle.forward(100)
@@ -463,7 +495,7 @@ class Jel:
         self.turtle.end_fill()
 
     def jel(self, tipus: int):
-        tipus = tipus % 10
+        tipus = tipus % 15
         if tipus == 0:
             self.hold() #Márkus Bence
             return
@@ -532,10 +564,9 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.hajo(0)
+        j.gomba()
 
         self.screen.mainloop()
-
 
 t = TurtleOOP()
 
