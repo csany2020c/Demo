@@ -310,18 +310,20 @@ class Jel:
                 self.turtle.right(90)
             self.turtle.forward(30)
 
-    def fa(self):
+    def fa(self, a:int = 10):
+        self.turtle.fillcolor(0, 0.5, 0.3)
+        self.turtle.begin_fill()
         self.turtle.right(90)
-        self.turtle.forward(100)
+        self.turtle.forward(80)
         self.turtle.left(90)
-        self.turtle.forward(50)
+        self.turtle.forward(30)
         self.turtle.left(90)
-        self.turtle.forward(100)
+        self.turtle.forward(80)
         self.turtle.right(50)
         self.turtle.forward(0)
-        for i in range(22):
-            self.turtle.right(45)
-            self.turtle.circle(20, 60)
+        for i in range(20):
+            self.turtle.right(50)
+            self.turtle.circle(20, 80)
 
     def korte(self, a:int = 10):
         self.turtle.fillcolor(0,0.8, 0.2)
@@ -564,7 +566,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.gomba()
+        j.fa()
 
         self.screen.mainloop()
 
