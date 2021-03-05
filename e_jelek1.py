@@ -41,7 +41,6 @@ class Jel:
         self.turtle.begin_fill()
         self.triangle()
         self.turtle.end_fill()
-        #self.screen.mainloop()
 
     def trapez(self):
         self.turtle.left(180)
@@ -532,7 +531,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.hajo(0)
+        j.gyertya()
 
         self.screen.mainloop()
 
