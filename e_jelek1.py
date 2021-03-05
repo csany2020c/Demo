@@ -1,8 +1,5 @@
 from turtle import Turtle
 from turtle import Screen
-from random import Random
-
-from e_szekreny import Szekreny
 
 
 class Jel:
@@ -25,7 +22,7 @@ class Jel:
     def hajo(self, width: int = 180, height: int = 240):
         self.turtle.speed()
         self.turtle.penup()
-        self.turtle.forward(46)
+        self.turtle.forward(32)
         self.turtle.pendown()
         self.turtle.color("brown")
         self.turtle.begin_fill()
@@ -33,10 +30,10 @@ class Jel:
         self.turtle.end_fill()
         self.turtle.penup()
         self.turtle.left(145)
-        self.turtle.forward(60)
+        self.turtle.forward(30)
         self.turtle.pendown()
         self.turtle.right(95)
-        self.turtle.forward(100)
+        self.turtle.forward(50)
         self.turtle.right(120)
         self.turtle.left(182.5)
         self.turtle.color("white")
@@ -47,18 +44,18 @@ class Jel:
 
     def trapez(self):
         self.turtle.left(180)
-        self.turtle.forward(100)
+        self.turtle.forward(50)
         self.turtle.left(150)
-        self.turtle.forward(40)
+        self.turtle.forward(20)
         self.turtle.left(30)
-        self.turtle.forward(40)
+        self.turtle.forward(20)
         self.turtle.left(37)
-        self.turtle.forward(40)
+        self.turtle.forward(20)
 
     def triangle(self):
         self.turtle.left(90)
         for i in range(3):
-            self.turtle.forward(60)
+            self.turtle.forward(30)
             self.turtle.left(120)
 
     def vonat(self):
@@ -220,12 +217,10 @@ class Jel:
     def domino(self, a:int = 100):
         self.turtle.backward(50)
         for i in range(2):
-            self.turtle.begin_fill()
             self.turtle.forward(a)
             self.turtle.left(90)
             self.turtle.forward(a / 2)
             self.turtle.left(90)
-            self.turtle.end_fill()
         self.turtle.forward(a / 2)
         self.turtle.left(90)
         self.turtle.forward(a / 2)
@@ -235,7 +230,6 @@ class Jel:
         self.turtle.forward(a / 4)
         self.turtle.pendown()
         self.turtle.left(90)
-        self.turtle.color("white")
         self.turtle.begin_fill()
         self.turtle.circle(a / 15)
         self.turtle.end_fill()
@@ -543,4 +537,6 @@ class Jel:
         if tipus == 14:
             self.tv() # Oláh Gergő
             return
+
+
 
