@@ -1,8 +1,5 @@
 from turtle import Turtle
 from turtle import Screen
-from random import Random
-
-from e_szekreny import Szekreny
 
 
 class Jel:
@@ -509,7 +506,7 @@ class Jel:
             self.gyertya() #Zsebők Dávid
             return
         if tipus == 4:
-            self.focilabda(1) # Németh Csaba Bence
+            self.focilabda() # Németh Csaba Bence
             return
         if tipus == 5:
             self.domino() # Kancsal Máté
@@ -543,30 +540,4 @@ class Jel:
             return
 
 
-class TurtleOOP:
-
-    turtle = Turtle()
-    screen = Screen()
-
-    left = -screen.window_width() / 2
-    right = screen.window_width() / 2
-    top = screen.window_height() / 2
-    bottom = -screen.window_height() / 2
-
-    def __init__(self):
-
-        self.turtle.speed(0)
-        self.turtle.penup()
-        sz = Szekreny(self.turtle)
-
-        # self.turtle.goto(self.left, self.bottom)
-        # sz.szekreny(5, 3)
-
-        sz.polc()
-        j = Jel(self.turtle)
-        j.gomba()
-
-        self.screen.mainloop()
-
-t = TurtleOOP()
 
