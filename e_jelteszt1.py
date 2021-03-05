@@ -9,6 +9,6 @@ j = Jel(turtle)
 s = Szekreny(turtle)
 
 s.polc()
-j.haziko()
+j.ceruza()
 
 screen.mainloop()
