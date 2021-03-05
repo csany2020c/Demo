@@ -542,31 +542,3 @@ class Jel:
             self.tv() # Oláh Gergő
             return
 
-
-class TurtleOOP:
-
-    turtle = Turtle()
-    screen = Screen()
-
-    left = -screen.window_width() / 2
-    right = screen.window_width() / 2
-    top = screen.window_height() / 2
-    bottom = -screen.window_height() / 2
-
-    def __init__(self):
-
-        self.turtle.speed(0)
-        self.turtle.penup()
-        sz = Szekreny(self.turtle)
-
-        # self.turtle.goto(self.left, self.bottom)
-        # sz.szekreny(5, 3)
-
-        sz.polc()
-        j = Jel(self.turtle)
-        j.hajo()
-
-        self.screen.mainloop()
-
-
-t = TurtleOOP()
