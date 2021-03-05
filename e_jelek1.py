@@ -302,11 +302,13 @@ class Jel:
 
     def letra(self):
         self.turtle.left(90)
+        self.turtle.color("saddlebrown")
+        self.turtle.back(100)
         for i in range(7):
             for i in range(4):
-                self.turtle.forward(40)
+                self.turtle.forward(30)
                 self.turtle.right(90)
-            self.turtle.forward(40)
+            self.turtle.forward(30)
 
     def fa(self):
         self.turtle.right(90)
@@ -554,7 +556,7 @@ class TurtleOOP:
 
         sz.polc()
         j = Jel(self.turtle)
-        j.nap()
+        j.letra()
 
         self.screen.mainloop()
 
