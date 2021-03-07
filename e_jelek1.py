@@ -365,19 +365,25 @@ class Jel:
         self.turtle.right(90)
         self.turtle.forward(-10)
         self.turtle.pendown()
+        self.turtle.begin_fill()
+        self.turtle.fillcolor(1, 1, 1)
         for i in range(4):
             self.turtle.forward(70)
             self.turtle.left(90)
+        self.turtle.end_fill()
         self.turtle.left(90)
         self.turtle.forward(70)
         self.turtle.left(90)
         self.turtle.forward(35)
         self.turtle.right(180)
+        self.turtle.begin_fill()
+        self.turtle.fillcolor(0.8, 0.1, 0)
         self.turtle.forward(140)
         self.turtle.left(120)
         for k in range(172):
             self.turtle.left(0.7)
             self.turtle.forward(1)
+        self.turtle.end_fill()
 
     def haziko(self):
         self.turtle.penup()
