@@ -214,7 +214,7 @@ class Jel:
             self.turtle.right(75)
         self.turtle.end_fill()
 
-    def domino(self, a:int = 100):
+    def domino(self, a:int = 99):
         self.turtle.backward(50)
         for i in range(2):
             self.turtle.forward(a)
