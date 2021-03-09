@@ -308,11 +308,11 @@ class Jel:
 
     def fa(self):
         self.turtle.right(90)
-        self.turtle.forward(100)
+        self.turtle.forward(70)
         self.turtle.left(90)
-        self.turtle.forward(50)
+        self.turtle.forward(20)
         self.turtle.left(90)
-        self.turtle.forward(100)
+        self.turtle.forward(70)
         self.turtle.right(50)
         self.turtle.forward(0)
         for i in range(22):
