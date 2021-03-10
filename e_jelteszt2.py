@@ -11,7 +11,7 @@ s = Szekreny(turtle)
 
 s.polc()
 j = Jel(turtle)
-j.fenyoag()
+j.gyongysor()
 
 # turtle.left(270)
 # turtle.forward(200)
