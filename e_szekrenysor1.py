@@ -5,6 +5,7 @@ class TurtleOOP:
 
     turtle = Turtle()
     screen = Screen()
+    screen.setup(height=680)
 
     left = -screen.window_width() / 2
     right = screen.window_width() / 2
