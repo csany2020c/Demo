@@ -332,7 +332,7 @@ class Jel:
                 self.turtle.circle(20, 80)
             self.turtle.end_fill()
 
-    def korte(self, a:int = 10):
+    def hagyma(self, a:int = 10):
         self.turtle.fillcolor(0.4,0.1, 0.25)
         self.turtle.begin_fill()
         self.turtle.left(90)
@@ -550,7 +550,7 @@ class Jel:
             self.ceruza() # Fatér László
             return
         if tipus == 8:
-            self.korte() # Fellner Milán
+            self.hagyma() # Fellner Milán
             return
         if tipus == 9:
             self.nap() #Troznai Roland
