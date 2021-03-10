@@ -348,7 +348,7 @@ class Jel:
         self.turtle.left(90)
         self.turtle.forward(20)
         self.turtle.right(90)
-        self.turtle.forward(30)
+        self.turtle.forward(20)
         self.turtle.begin_fill()
         self.turtle.pendown()
         self.turtle.circle(13)
