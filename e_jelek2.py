@@ -328,6 +328,44 @@ class Jel:
 
         self.turtle.fillcolor("red")
 
+        self.turtle.penup()
+        self.turtle.right(180)
+        self.turtle.forward(120)
+        self.turtle.left(90)
+        self.turtle.forward(75)
+        self.turtle.begin_fill()
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("blue")
+
+        self.turtle.penup()
+        self.turtle.left(100)
+        self.turtle.forward(30)
+        self.turtle.left(90)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(30)
+        self.turtle.begin_fill()
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("yellow")
+
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(60)
+        self.turtle.begin_fill()
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
     def kifli(self):
         self.turtle.width(2)
         self.turtle.fillcolor("#c9b75b")
