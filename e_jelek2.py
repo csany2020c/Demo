@@ -13,7 +13,7 @@ class Jel:
 
 
     def jel(self, tipus: int):
-        tipus = tipus % 11
+        tipus = tipus % 12
 
         if tipus == 0:
             self.fenyofa() # Fekete Félix
@@ -48,6 +48,10 @@ class Jel:
         if tipus == 10:
             self.szivecske() # Dóra Márton
             return
+        if tipus == 11:
+            self.fenyofa1() # Bóbics Barnabás
+            return
+
 
     def fagyi(self):
         self.turtle.right(110)
