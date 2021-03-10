@@ -393,28 +393,51 @@ class Jel:
         self.turtle.end_fill()
 
     def kifli(self):
-        self.turtle.width(2)
-        self.turtle.fillcolor("#c9b75b")
+        self.turtle.penup()
+        self.turtle.back(60)
+        self.turtle.right(90)
+        self.turtle.forward(50)
+        self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.penup()
+        self.turtle.width(3)
+        self.turtle.color("#735219")
+        self.turtle.fillcolor("#a87a2a")
         self.turtle.begin_fill()
-        self.turtle.left(50)
-        self.turtle.forward(100)
-        for i in range(12):
-            self.turtle.left(15)
+        for i in range(30):
+            self.turtle.pendown()
+            self.turtle.left(4)
+            self.turtle.forward(5)
+        for i in range(16):
+            self.turtle.left(10)
+            self.turtle.forward(2)
+        for i in range(1):
+            self.turtle.forward(10)
+        for i in range(10):
+            self.turtle.right(8)
+            self.turtle.forward(10)
+        for i in range(8):
+            self.turtle.left(20)
             self.turtle.forward(3)
         for i in range(1):
-            self.turtle.forward(100)
-        for i in range(12):
-            self.turtle.left(15)
-            self.turtle.forward(3)
+            self.turtle.left(12)
+            self.turtle.forward(20)
         self.turtle.end_fill()
         for i in range(1):
-            self.turtle.forward(15)
-            self.turtle.left(50)
-            self.turtle.forward(29)
-            self.turtle.right(50)
-            self.turtle.forward(45)
-            self.turtle.right(125)
+            self.turtle.penup()
+            self.turtle.forward(33)
+            self.turtle.left(90)
+            self.turtle.forward(50)
+            self.turtle.right(90)
+            self.turtle.pendown()
+            self.turtle.forward(36)
+            self.turtle.right(120)
+            self.turtle.penup()
             self.turtle.forward(30)
+            self.turtle.right(70)
+            self.turtle.pendown()
+            self.turtle.forward(40)
+            self.turtle.hideturtle()
     def pottyoslabda(self):
         self.turtle.penup()
         self.turtle.right(180)
