@@ -12,7 +12,7 @@ turtle.forward(100)
 turtle.left(25)
 s.polc()
 j = Jel(turtle)
-j.labda()
+j.gyongysor()
 
 # turtle.left(270)
 # turtle.forward(200)
