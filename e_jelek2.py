@@ -484,9 +484,3 @@ class Jel:
             self.turtle.backward(10)
             self.turtle.forward(10)
             self.turtle.left(135)
-
-    def sziv(self):
-        self.turtle.begin_fill()
-        self.turtle.left(45)
-        self.turtle.forward(105)
-        self.turtle.left(45)
