@@ -314,6 +314,7 @@ class Jel:
 
     def gyongysor(self):
         self.turtle.penup()
+        self.turtle.pensize(2)
         self.turtle.forward(80)
         self.turtle.setheading(225)
         self.turtle.pendown()
@@ -323,27 +324,36 @@ class Jel:
 
         self.turtle.fillcolor("red")
 
-        self.turtle.begin_fill()
         self.turtle.penup()
-        self.turtle.goto(135, 105)
+        self.turtle.right(180)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.begin_fill()
         self.turtle.pendown()
         self.turtle.circle(13)
         self.turtle.end_fill()
 
         self.turtle.fillcolor("blue")
 
-        self.turtle.begin_fill()
         self.turtle.penup()
-        self.turtle.goto(100, 100)
+        self.turtle.right(180)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.begin_fill()
         self.turtle.pendown()
         self.turtle.circle(13)
         self.turtle.end_fill()
 
         self.turtle.fillcolor("yellow")
 
-        self.turtle.begin_fill()
         self.turtle.penup()
-        self.turtle.goto(65, 105)
+        self.turtle.right(180)
+        self.turtle.forward(100)
+        self.turtle.left(90)
+        self.turtle.forward(100)
+        self.turtle.begin_fill()
         self.turtle.pendown()
         self.turtle.circle(13)
         self.turtle.end_fill()
