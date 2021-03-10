@@ -481,6 +481,8 @@ class Jel:
         self.turtle.forward(600)
 
     def kocsi2(self):
+
+        self.turtle.fillcolor('red')
         self.turtle.begin_fill()
 
         for i in range(82):
@@ -507,7 +509,11 @@ class Jel:
         self.turtle.right(90)
         self.turtle.forward(20)
         self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.left(90)
         self.turtle.forward(20)
+
+        self.turtle.end_fill()
 
 
     def labda(self):
