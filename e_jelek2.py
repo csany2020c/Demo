@@ -13,7 +13,7 @@ class Jel:
 
 
     def jel(self, tipus: int):
-        tipus = tipus % 6
+        tipus = tipus % 9
 
         if tipus == 0:
             self.fenyofa() # Fekete Félix
