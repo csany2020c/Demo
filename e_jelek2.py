@@ -33,6 +33,16 @@ class Jel:
         if tipus == 5:
             self.kifli() # Konczik Ádám
             return
+        if tipus == 6:
+            self.fagyi() # Kis Kornél
+            return
+        if tipus == 7:
+            self.kocsi2() # Tóth Ákos
+            return
+        if tipus == 8:
+            self.labda() # Vizdák Máté
+            return
+
     def fagyi(self):
         self.turtle.right(110)
         self.turtle.forward(50)
