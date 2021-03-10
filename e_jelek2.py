@@ -490,3 +490,13 @@ class Jel:
         self.turtle.left(45)
         self.turtle.forward(105)
         self.turtle.left(45)
+        for a in range(10):
+            self.turtle.left(15)
+            self.turtle.forward(length)
+        self.turtle.right(135)
+        for a in range(10):
+            self.turtle.left(15)
+            self.turtle.forward(length)
+        self.turtle.left(60)
+        self.turtle.forward(105)
+        self.turtle.end_fill()
