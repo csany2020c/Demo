@@ -13,7 +13,7 @@ class Jel:
 
 
     def jel(self, tipus: int):
-        tipus = tipus % 12
+        tipus = tipus % 13
 
         if tipus == 0:
             self.fenyofa() # Fekete Félix
@@ -49,9 +49,11 @@ class Jel:
             self.szivecske() # Dóra Márton
             return
         if tipus == 11:
-            self.fenyofa1() # Bóbics Barnabás
+            self.sziv() # Cziráki Leila
             return
-
+        if tipus == 12:
+            self.szivecske() # Dóra Márton
+            return
 
     def fagyi(self):
         self.turtle.right(110)
@@ -315,11 +317,9 @@ class Jel:
 
         self.turtle.left(60)
         self.turtle.forward(20)
-
     def gyongysor(self):
         self.turtle.penup()
-        self.turtle.pensize(2)
-        self.turtle.forward(80)
+        self.turtle.goto(170, 130)
         self.turtle.setheading(225)
         self.turtle.pendown()
         for i in range(90):
@@ -327,40 +327,6 @@ class Jel:
             self.turtle.right(1)
 
         self.turtle.fillcolor("red")
-
-        self.turtle.penup()
-        self.turtle.right(180)
-        self.turtle.forward(100)
-        self.turtle.left(90)
-        self.turtle.forward(100)
-        self.turtle.begin_fill()
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
-
-        self.turtle.fillcolor("blue")
-
-        self.turtle.penup()
-        self.turtle.right(180)
-        self.turtle.forward(100)
-        self.turtle.left(90)
-        self.turtle.forward(100)
-        self.turtle.begin_fill()
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
-
-        self.turtle.fillcolor("yellow")
-
-        self.turtle.penup()
-        self.turtle.right(180)
-        self.turtle.forward(100)
-        self.turtle.left(90)
-        self.turtle.forward(100)
-        self.turtle.begin_fill()
-        self.turtle.pendown()
-        self.turtle.circle(13)
-        self.turtle.end_fill()
 
     def kifli(self):
         self.turtle.width(2)
@@ -462,9 +428,6 @@ class Jel:
         self.turtle.left(90)
 
     def labda(self):
-        self.turtle.penup()
-        self.turtle.goto(10, 180)
-        self.turtle.pendown()
         self.turtle.begin_fill()
         self.turtle.circle(70,400)
         self.turtle.color('red')
@@ -473,24 +436,24 @@ class Jel:
         self.turtle.penup()
         self.turtle.begin_fill()
         self.turtle.color('white')
-        self.turtle.goto(50, 260)
+        self.turtle.goto(100, 150)
         self.turtle.end_fill()
         self.turtle.pendown()
         self.turtle.circle(10, 400)
         self.turtle.penup()
-        self.turtle.goto(20, 300)
+        self.turtle.goto(70, 220)
         self.turtle.pendown()
         self.turtle.circle(10, 400)
         self.turtle.penup()
-        self.turtle.goto(10, 210)
+        self.turtle.goto(130, 190)
         self.turtle.pendown()
         self.turtle.circle(10, 400)
         self.turtle.penup()
-        self.turtle.goto(10, 260)
+        self.turtle.goto(120, 240)
         self.turtle.pendown()
         self.turtle.circle(10, 400)
         self.turtle.penup()
-        self.turtle.goto(-40, 260)
+        self.turtle.goto(60, 180)
         self.turtle.pendown()
         self.turtle.circle(10, 400)
 
@@ -528,24 +491,8 @@ class Jel:
             self.turtle.forward(10)
             self.turtle.left(135)
 
-    def fenyofa1(self):
-        self.turtle.right(120)
-        self.turtle.forward(40)
-        self.turtle.left(90)
-        self.turtle.forward(30)
-        self.turtle.left(90)
-        self.turtle.forward(30)
-        self.turtle.left(70)
-        self.turtle.forward(34)
-        self.turtle.right(210)
-        self.turtle.forward(70)
-        self.turtle.left(180)
-        self.turtle.forward(120)
-        self.turtle.left(130)
-        self.turtle.forward(30)
-        self.turtle.right(240)
-        self.turtle.forward(25)
-        self.turtle.left(70)
-        self.turtle.forward(30)
-        self.turtle.left(120)
-        self.turtle.forward(25)
+    def sziv(self):
+        self.turtle.begin_fill()
+        self.turtle.left(45)
+        self.turtle.forward(105)
+        self.turtle.left(45)
