@@ -33,7 +33,6 @@ class Jel:
         if tipus == 5:
             self.kifli() # Konczik Ádám
             return
-
     def fagyi(self):
         self.turtle.right(110)
         self.turtle.forward(50)
@@ -359,3 +358,21 @@ class Jel:
         self.turtle.pendown()
         self.turtle.circle(10, 400)
 
+    def szivecske(self):
+        self.turtle.fillcolor('red')
+        self.turtle.begin_fill()
+        self.turtle.right(90)
+        self.turtle.penup()
+        self.turtle.forward(50)
+        self.turtle.right(135)
+        self.turtle.pendown()
+        self.turtle.forward(55)
+        for i in range(90):
+            self.turtle.forward(1)
+            self.turtle.right(2)
+        self.turtle.left(90)
+        for i in range(90):
+            self.turtle.forward(1)
+            self.turtle.right(2)
+        self.turtle.forward(60)
+        self.turtle.end_fill()
