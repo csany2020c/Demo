@@ -8,15 +8,10 @@ turtle._delay(0)
 turtle.speed(0)
 s = Szekreny(turtle)
 # s.polc()
-
+turtle.forward(100)
+turtle.left(25)
 s.polc()
 j = Jel(turtle)
-# j.mintajel()
-j.ellipse(10,20,300,100)
-j.mintajel()
-s.polc()
-j.kocsi()
-
 j.gyongysor()
 
 # turtle.left(270)
