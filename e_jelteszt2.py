@@ -17,4 +17,5 @@ j.gyongysor()
 # turtle.left(270)
 # turtle.forward(200)
 # s.polc()
+
 screen.mainloop()

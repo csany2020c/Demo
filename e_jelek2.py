@@ -546,6 +546,7 @@ class Jel:
         self.turtle.left(90)
         self.turtle.pendown()
         self.turtle.begin_fill()
+        self.turtle.circle(70,400)
         self.turtle.color('red')
         self.turtle.circle(70, 400)
         self.turtle.end_fill()
@@ -622,18 +623,24 @@ class Jel:
         self.turtle.end_fill()
 
     def fenyoag (self):
-        for i in range(20):
+        self.turtle.penup()
+        self.turtle.backward(50)
+        self.turtle.right(90)
+        self.turtle.forward(30)
+        self.turtle.left(90)
+        self.turtle.pendown()
+        for i in range(30):
             self.turtle.color("brown")
-            self.turtle.forward(3)
+            self.turtle.forward(4)
             self.turtle.left(2)
             self.turtle.color("green")
             self.turtle.right(90)
             self.turtle.left(45)
-            self.turtle.forward(10)
-            self.turtle.backward(10)
+            self.turtle.forward(20)
+            self.turtle.backward(20)
             self.turtle.right(90)
-            self.turtle.backward(10)
-            self.turtle.forward(10)
+            self.turtle.backward(20)
+            self.turtle.forward(20)
             self.turtle.left(135)
 
     def fenyofa1(self):
@@ -657,6 +664,10 @@ class Jel:
         self.turtle.forward(30)
         self.turtle.left(120)
         self.turtle.forward(25)
+
+
+
+
 
     def sziv(self):
         self.turtle.color("purple")
