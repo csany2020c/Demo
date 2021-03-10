@@ -509,7 +509,7 @@ class Jel:
         self.turtle.right(90)
         self.turtle.forward(20)
         self.turtle.left(90)
-        self.turtle.forward(30)
+        self.turtle.forward(20)
         self.turtle.left(90)
         self.turtle.forward(20)
 
