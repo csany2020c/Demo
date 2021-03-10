@@ -403,13 +403,11 @@ class Jel:
         self.turtle.right(180)
         self.turtle.forward(60)
         self.turtle.left(90)
-        for i in range(360):
-            self.turtle.begin_fill()
-            self.turtle.color('red')
-            self.turtle.pendown()
-            self.turtle.forward(1)
-            self.turtle.left(1)
-            self.turtle.end_fill()
+        self.turtle.begin_fill()
+        self.turtle.circle(59)
+        self.turtle.color('red')
+        self.turtle.end_fill()
+
 
         self.turtle.penup()
         self.turtle.left(90)
