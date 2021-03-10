@@ -333,7 +333,7 @@ class Jel:
             self.turtle.end_fill()
 
     def korte(self, a:int = 10):
-        self.turtle.fillcolor(0,0.8, 0.2)
+        self.turtle.fillcolor(0.4,0.1, 0.25)
         self.turtle.begin_fill()
         self.turtle.left(90)
         self.turtle.penup()
