@@ -79,6 +79,8 @@ class Jel:
     def fenyofa(self):
         self.turtle.right(120)
         self.turtle.forward(40)
+        self.turtle.fillcolor("green")
+        self.turtle.begin_fill()
         self.turtle.left(90)
         self.turtle.forward(30)
         self.turtle.left(90)
@@ -97,6 +99,7 @@ class Jel:
         self.turtle.forward(30)
         self.turtle.left(120)
         self.turtle.forward(25)
+        self.turtle.end_fill()
 
     def ellipse(self, x1: float, y1: float, x2: float, y2: float):
         # double t, a, b, tinc, centx, centy;
@@ -403,13 +406,11 @@ class Jel:
         self.turtle.right(180)
         self.turtle.forward(60)
         self.turtle.left(90)
-        for i in range(360):
-            self.turtle.begin_fill()
-            self.turtle.color('red')
-            self.turtle.pendown()
-            self.turtle.forward(1)
-            self.turtle.left(1)
-            self.turtle.end_fill()
+        self.turtle.begin_fill()
+        self.turtle.circle(59)
+        self.turtle.color('red')
+        self.turtle.end_fill()
+
 
         self.turtle.penup()
         self.turtle.left(90)
@@ -589,11 +590,11 @@ class Jel:
         self.turtle.left(45)
         for a in range(10):
             self.turtle.left(15)
-            self.turtle.forward(length)
+            self.turtle.forward
         self.turtle.right(135)
         for a in range(10):
             self.turtle.left(15)
-            self.turtle.forward(length)
+            self.turtle.forward
         self.turtle.left(60)
         self.turtle.forward(105)
         self.turtle.end_fill()
