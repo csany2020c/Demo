@@ -13,7 +13,7 @@ class Jel:
 
 
     def jel(self, tipus: int):
-        tipus = tipus % 6
+        tipus = tipus % 11
 
         if tipus == 0:
             self.fenyofa() # Fekete Félix
@@ -32,6 +32,21 @@ class Jel:
             return
         if tipus == 5:
             self.kifli() # Konczik Ádám
+            return
+        if tipus == 6:
+            self.fagyi() # Kis Kornél
+            return
+        if tipus == 7:
+            self.kocsi2() # Tóth Ákos
+            return
+        if tipus == 8:
+            self.labda() # Vizdák Máté
+            return
+        if tipus == 9:
+            self.fenyoag() # Rigó Donát
+            return
+        if tipus == 10:
+            self.szivecske() # Dóra Márton
             return
 
     def fagyi(self):
@@ -385,3 +400,36 @@ class Jel:
         self.turtle.pendown()
         self.turtle.circle(10, 400)
 
+    def szivecske(self):
+        self.turtle.fillcolor('red')
+        self.turtle.begin_fill()
+        self.turtle.right(90)
+        self.turtle.penup()
+        self.turtle.forward(50)
+        self.turtle.right(135)
+        self.turtle.pendown()
+        self.turtle.forward(55)
+        for i in range(90):
+            self.turtle.forward(1)
+            self.turtle.right(2)
+        self.turtle.left(90)
+        for i in range(90):
+            self.turtle.forward(1)
+            self.turtle.right(2)
+        self.turtle.forward(60)
+        self.turtle.end_fill()
+
+    def fenyoag (self):
+        for i in range(20):
+            self.turtle.color("brown")
+            self.turtle.forward(3)
+            self.turtle.left(2)
+            self.turtle.color("green")
+            self.turtle.right(90)
+            self.turtle.left(45)
+            self.turtle.forward(10)
+            self.turtle.backward(10)
+            self.turtle.right(90)
+            self.turtle.backward(10)
+            self.turtle.forward(10)
+            self.turtle.left(135)
