@@ -13,7 +13,7 @@ class Jel:
 
 
     def jel(self, tipus: int):
-        tipus = tipus % 11
+        tipus = tipus % 13
 
         if tipus == 0:
             self.fenyofa() # Fekete Félix
@@ -46,6 +46,12 @@ class Jel:
             self.fenyoag() # Rigó Donát
             return
         if tipus == 10:
+            self.szivecske() # Dóra Márton
+            return
+        if tipus == 11:
+            self.sziv() # Cziráki Leila
+            return
+        if tipus == 12:
             self.szivecske() # Dóra Márton
             return
 
@@ -311,9 +317,11 @@ class Jel:
 
         self.turtle.left(60)
         self.turtle.forward(20)
+
     def gyongysor(self):
         self.turtle.penup()
-        self.turtle.goto(170, 130)
+        self.turtle.pensize(2)
+        self.turtle.forward(80)
         self.turtle.setheading(225)
         self.turtle.pendown()
         for i in range(90):
@@ -321,6 +329,44 @@ class Jel:
             self.turtle.right(1)
 
         self.turtle.fillcolor("red")
+
+        self.turtle.penup()
+        self.turtle.right(180)
+        self.turtle.forward(120)
+        self.turtle.left(90)
+        self.turtle.forward(75)
+        self.turtle.begin_fill()
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("blue")
+
+        self.turtle.penup()
+        self.turtle.left(100)
+        self.turtle.forward(30)
+        self.turtle.left(90)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(30)
+        self.turtle.begin_fill()
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
+
+        self.turtle.fillcolor("yellow")
+
+        self.turtle.penup()
+        self.turtle.left(180)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(20)
+        self.turtle.right(90)
+        self.turtle.forward(60)
+        self.turtle.begin_fill()
+        self.turtle.pendown()
+        self.turtle.circle(13)
+        self.turtle.end_fill()
 
     def kifli(self):
         self.turtle.width(2)
