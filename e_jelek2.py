@@ -114,7 +114,7 @@ class Jel:
     def katica(self):
         self.turtle.penup()
         self.turtle.right(125)
-        self.turtle.forward(50)
+        self.turtle.forward(55)
         self.turtle.left(125)
         self.turtle.pendown()
         self.turtle.fillcolor("red")
@@ -226,6 +226,12 @@ class Jel:
         self.turtle.end_fill()
         self.turtle.penup()
         self.turtle.forward(22.5)
+        self.turtle.pendown()
+        self.turtle.fillcolor("black")
+        self.turtle.begin_fill()
+        self.turtle.circle(10, 360)
+        self.turtle.end_fill()
+        self.turtle.penup()
         self.turtle.left(90)
         self.turtle.forward(30)
         self.turtle.right(90)
@@ -320,6 +326,7 @@ class Jel:
 
     def gyongysor(self):
         self.turtle.penup()
+        self.turtle.goto(170, 130)
         self.turtle.pensize(2)
         self.turtle.forward(80)
         self.turtle.setheading(225)
@@ -348,7 +355,7 @@ class Jel:
         self.turtle.left(90)
         self.turtle.forward(20)
         self.turtle.right(90)
-        self.turtle.forward(30)
+        self.turtle.forward(20)
         self.turtle.begin_fill()
         self.turtle.pendown()
         self.turtle.circle(13)
@@ -468,6 +475,9 @@ class Jel:
         self.turtle.left(90)
 
     def labda(self):
+        self.turtle.penup()
+        self.turtle.goto(10, 180)
+        self.turtle.pendown()
         self.turtle.begin_fill()
         self.turtle.circle(70,400)
         self.turtle.color('red')
@@ -530,6 +540,28 @@ class Jel:
             self.turtle.backward(10)
             self.turtle.forward(10)
             self.turtle.left(135)
+
+    def fenyofa1(self):
+        self.turtle.right(120)
+        self.turtle.forward(40)
+        self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.left(70)
+        self.turtle.forward(34)
+        self.turtle.right(210)
+        self.turtle.forward(70)
+        self.turtle.left(180)
+        self.turtle.forward(120)
+        self.turtle.left(130)
+        self.turtle.forward(30)
+        self.turtle.right(240)
+        self.turtle.forward(25)
+        self.turtle.left(70)
+        self.turtle.forward(30)
+        self.turtle.left(120)
+        self.turtle.forward(25)
 
     def sziv(self):
         self.turtle.begin_fill()
