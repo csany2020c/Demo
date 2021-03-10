@@ -598,19 +598,21 @@ class Jel:
         self.turtle.forward(25)
 
     def sziv(self):
+        self.turtle.color("red")
+        self.turtle.fillcolor('red')
         self.turtle.begin_fill()
         self.turtle.left(45)
         self.turtle.forward(105)
         self.turtle.left(45)
         for i in range(10):
             self.turtle.left(15)
-            self.turtle.forward
-            self.turtle.right(135)
-
+            self.turtle.forward(10)
+        self.turtle.right(135)
         for i in range(10):
             self.turtle.left(15)
-            self.turtle.forward
-
+            self.turtle.forward(10)
         self.turtle.left(60)
         self.turtle.forward(105)
         self.turtle.end_fill()
+
+
