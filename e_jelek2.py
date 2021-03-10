@@ -317,9 +317,11 @@ class Jel:
 
         self.turtle.left(60)
         self.turtle.forward(20)
+
     def gyongysor(self):
         self.turtle.penup()
-        self.turtle.goto(170, 130)
+        self.turtle.pensize(2)
+        self.turtle.forward(80)
         self.turtle.setheading(225)
         self.turtle.pendown()
         for i in range(90):
