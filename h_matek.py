@@ -25,7 +25,13 @@ class TurtleOOP:
         self.turtle.goto(0, self.bottom)
 
     def f(self, x: float):
-        return x * x + 2 * x + 8
+        return x * x * 0.005 + x + 8
+
+    def g(self, x: float):
+        return x*x*x * 0.005 + x*x * 0.005 - x + 3
+
+    def e(self, x: float):
+        return x * 5 + 30
 
     # https://mathworld.wolfram.com/FourierSeriesSquareWave.html
     def squarewave(self, x: float, L: float = 20, height: float = 100, iterations: int = 27):
@@ -45,13 +51,26 @@ class TurtleOOP:
         self.turtle.goto(self.left, 0)
         self.turtle.pendown()
         for x in range(self.left, self.right, 1):
-            self.turtle.goto(x, int(self.squarewave(x * 0.1, 20, 100, 10)))
+            self.turtle.goto(x, self.e(x))
+
+
+        self.turtle.penup()
+        self.turtle.goto(self.left, 0)
+        self.turtle.pendown()
+        for x in range(self.left, self.right, 1):
+            self.turtle.goto(x, int(self.squarewave(x * 0.1, 20, 100, 100)))
 
         self.turtle.penup()
         self.turtle.goto(self.left, 0)
         self.turtle.pendown()
         for x in range(self.left, self.right, 1):
             self.turtle.goto(x, int(self.f(x)))
+
+        self.turtle.penup()
+        self.turtle.goto(self.left, 0)
+        self.turtle.pendown()
+        for x in range(self.left, self.right, 1):
+            self.turtle.goto(x, self.g(x))
 
 
         self.screen.mainloop()

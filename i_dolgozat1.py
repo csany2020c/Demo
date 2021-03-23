@@ -83,16 +83,16 @@ class TurtleOOP:
             self.turtle.forward(size * 50)
 
     def __init__(self):
-        # self.turtle._delay(0)
-        # self.turtle.speed(0)
+        self.turtle._delay(0)
+        self.turtle.speed(0)
         self.turtle.penup()
         self.turtle.goto(-300, -300)
-        self.router(size=1.7)
+        self.router(size=1.1)
 
         self.turtle.penup()
         self.turtle.left(27)
         self.turtle.goto(-300, 0)
-        self.router(size=1.7)
+        self.router(size=0.6)
 
         self.turtle.penup()
         self.turtle.right(77)
