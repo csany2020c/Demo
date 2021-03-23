@@ -5,10 +5,12 @@ class Clock:
     _t: datetime = datetime.now()
     _hourChangeEvent = 0
     _secondChangeEvent = 0
+    _minuteChangeEvent = 0
     _scr: TurtleScreen
     _dsp_min: int = _t.min
     _dsp_sec: int = _t.second
     _dsp_hour: int = _t.hour
+    frequency: int = 100
 
     def __init__(self, scr: TurtleScreen):
         self._scr = scr
@@ -52,7 +54,7 @@ class Clock:
         fun()
 
     def _handleEvents(self):
-        self._scr.ontimer(fun=self._handleEvents, t=100)
+        self._scr.ontimer(fun=self._handleEvents, t=self.frequency)
         self._t = datetime.now()
         if self._dsp_sec != self._t.second:
             self._dsp_sec = self._t.second
@@ -67,7 +69,6 @@ class Clock:
 
     def leftNumber(self, num: int) -> int:
         return (num // 10) % 10
-
 
     def rightNumber(self, num: int) -> int:
         return num % 10
