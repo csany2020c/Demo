@@ -61,11 +61,13 @@ class Clock:
             if self._secondChangeEvent != 0:
                 self._secondChangeEvent()
         if self._dsp_min != self._t.min:
-            print("minute: " + str(self._t.min))
             self._dsp_min = self._t.min
+            if self._minuteChangeEvent != 0:
+                self._minuteChangeEvent()
         if self._dsp_hour != self._t.hour:
-            print("hour: " + str(self._t.hour))
             self._dsp_hour = self._t.hour
+            if self._hourChangeEvent != 0:
+                self._hourChangeEvent()
 
     def leftNumber(self, num: int) -> int:
         return (num // 10) % 10
