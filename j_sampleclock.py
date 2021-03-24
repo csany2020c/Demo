@@ -26,9 +26,10 @@ class SampleClock:
         self.scr.mainloop()
 
     def printToConsole(self):
-        print("Hour: " + str(self.clk.leftNumber(self.clk.hour24())) + "_" + str(self.clk.rightNumber(self.clk.hour24())))
-        print("Minute: " + str(self.clk.leftNumber(self.clk.min())) + "_" + str(self.clk.rightNumber(self.clk.min())))
-        print("Second: " + str(self.clk.leftNumber(self.clk.sec())) + "_" + str(self.clk.rightNumber(self.clk.sec())))
+        # print("Hour: " + str(self.clk.leftNumber(self.clk.hour24())) + "_" + str(self.clk.rightNumber(self.clk.hour24())))
+        # print("Minute: " + str(self.clk.leftNumber(self.clk.min())) + "_" + str(self.clk.rightNumber(self.clk.min())))
+        # print("Second: " + str(self.clk.leftNumber(self.clk.sec())) + "_" + str(self.clk.rightNumber(self.clk.sec())))
+        pass
 
     def writeSec(self):
         self.printToConsole()
