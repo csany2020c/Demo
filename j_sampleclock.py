@@ -40,6 +40,7 @@ class SampleClock:
         self.secturtle.forward(200)
         self.secturtle.right(90 + 3)
         self.secturtle.pendown()
+        print(self.clk.leftNumber(self.clk.sec()))
         for i in range(self.clk.sec()):
             self.secturtle.forward(20.943951023931954923084289221863)
             self.secturtle.right(6)
