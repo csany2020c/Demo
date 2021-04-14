@@ -291,9 +291,11 @@ class Jel:
         self.turtle.left(45)
         self.turtle.forward(15)
     def kocsi(self):
+
         self.turtle.penup()
         self.turtle.back(85)
         self.turtle.pendown()
+
         self.turtle.left(90)
         self.turtle.forward(20)
         self.turtle.right(90)
@@ -301,8 +303,42 @@ class Jel:
         self.turtle.forward(40)
         self.turtle.left(70)
         self.turtle.forward(40)
+
         self.turtle.right(70)
+        self.turtle.forward(10)
+        self.turtle.right(90)
+        self.turtle.penup()
+        self.turtle.forward(10)
+        self.turtle.pendown()
+
+        self.turtle.begin_fill()
+        self.turtle.fillcolor("cyan")
+
+        self.turtle.left(70)
+        self.turtle.right(90)
+        self.turtle.forward(30)
+        self.turtle.left(110)
         self.turtle.forward(60)
+        self.turtle.left(110)
+        self.turtle.forward(30)
+        self.turtle.left(70)
+        self.turtle.forward(20)
+        self.turtle.left(90)
+        self.turtle.forward(30)
+        self.turtle.backward(30)
+        self.turtle.right(90)
+        self.turtle.forward(20)
+        self.turtle.penup()
+
+        self.turtle.end_fill()
+
+        self.turtle.right(90)
+        self.turtle.forward(10)
+        self.turtle.right(90)
+
+        self.turtle.pendown()
+
+        self.turtle.forward(50)
         self.turtle.right(70)
         self.turtle.forward(40)
         self.turtle.left(70)
