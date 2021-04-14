@@ -12,6 +12,7 @@ class SampleClock:
     hourturtle = Turtle(shape="turtle")
 
     def __init__(self):
+
         self.secturtle._delay(0)
         self.secturtle.speed(0)
         self.minturtle._delay(0)
@@ -26,10 +27,10 @@ class SampleClock:
         self.scr.mainloop()
 
     def printToConsole(self):
-        # print("Hour: " + str(self.clk.leftNumber(self.clk.hour24())) + "_" + str(self.clk.rightNumber(self.clk.hour24())))
-        # print("Minute: " + str(self.clk.leftNumber(self.clk.min())) + "_" + str(self.clk.rightNumber(self.clk.min())))
-        # print("Second: " + str(self.clk.leftNumber(self.clk.sec())) + "_" + str(self.clk.rightNumber(self.clk.sec())))
-        pass
+        print("Hour: " + str(self.clk.leftNumber(self.clk.hour24())) + "_" + str(self.clk.rightNumber(self.clk.hour24())))
+        print("Minute: " + str(self.clk.leftNumber(self.clk.min())) + "_" + str(self.clk.rightNumber(self.clk.min())))
+        print("Second: " + str(self.clk.leftNumber(self.clk.sec())) + "_" + str(self.clk.rightNumber(self.clk.sec())))
+        return
 
     def writeSec(self):
         self.printToConsole()
@@ -43,6 +44,7 @@ class SampleClock:
         for i in range(self.clk.sec()):
             self.secturtle.forward(20.943951023931954923084289221863)
             self.secturtle.right(6)
+        self.secturtle.penup()
 
     def writeMin(self):
         self.minturtle.clear()
@@ -55,6 +57,7 @@ class SampleClock:
         for i in range(self.clk.min()):
             self.minturtle.forward(18.849555921538759430775860299677)
             self.minturtle.right(6)
+        self.minturtle.penup()
 
     def writeHour(self):
         self.hourturtle.clear()
@@ -67,3 +70,4 @@ class SampleClock:
         for i in range(self.clk.hour12() * 6):
             self.hourturtle.forward(83.775804095727819692337156887453 / 6)
             self.hourturtle.right(30 / 6)
+        self.hourturtle.penup()
