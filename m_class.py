@@ -10,6 +10,7 @@ class Mouse:
     live: bool = True
 
     def __init__(self, name: str, color: str, image: str = "m_jerry.gif"):
+        print("Megszületett " + name + ".")
         self.name = name
         self.color = color
         self.turtle = Turtle()
@@ -46,19 +47,22 @@ class Cat:
         else:
             print(self.name + " nem tudta megenni az egeret.")
 
-
-Jerry = Mouse("Jerry", "Brown")
-Tom = Cat("Tom", "Gray and blue")
-Garfield = Cat("Garfield", "Orange", "m_garfield.gif")
+Jerry: Mouse
+Jerry = Mouse(name="Jerry", color="Brown")
+Hg = Mouse(name="Hógolyó", color="white")
+Tom = Cat(name="Tom", color="Gray and blue")
+Garfield = Cat(name="Garfield", color="Orange", image="m_garfield.gif")
 
 print(Tom)
 print(Garfield)
 print(Jerry)
 
 Jerry.turtle.goto(300,300)
+Hg.turtle.goto(-300,-300)
 
-Garfield.eat(Jerry)
 Tom.eat(Jerry)
+Tom.eat(Hg)
+Garfield.eat(Jerry)
 
 print(Garfield.mouseCount)
 
