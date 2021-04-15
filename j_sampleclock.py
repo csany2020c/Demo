@@ -13,12 +13,12 @@ class SampleClock:
 
     def __init__(self):
 
-        self.secturtle._delay(0)
-        self.secturtle.speed(0)
-        self.minturtle._delay(0)
-        self.minturtle.speed(0)
-        self.hourturtle._delay(0)
-        self.hourturtle.speed(0)
+        # self.secturtle._delay(0)
+        # self.secturtle.speed(0)
+        # self.minturtle._delay(0)
+        # self.minturtle.speed(0)
+        # self.hourturtle._delay(0)
+        # self.hourturtle.speed(0)
 
         self.clk.setOnSecondChangeListener(self.writeSec)
         self.clk.setOnMinuteChangeListener(self.writeMin)
@@ -33,7 +33,7 @@ class SampleClock:
         return
 
     def writeSec(self):
-        self.printToConsole()
+        # self.printToConsole()
         self.secturtle.clear()
         self.secturtle.reset()
         self.secturtle.penup()
@@ -41,7 +41,7 @@ class SampleClock:
         self.secturtle.forward(200)
         self.secturtle.right(90 + 3)
         self.secturtle.pendown()
-        print(self.clk.leftNumber(self.clk.sec()))
+        # print(self.clk.leftNumber(self.clk.sec()))
         for i in range(self.clk.sec()):
             self.secturtle.forward(20.943951023931954923084289221863)
             self.secturtle.right(6)
