@@ -5,7 +5,8 @@ class StarActor(MyActor):
     __speed: float
 
     def click(self, pos, btn):
-        self.remove_from_stage()
+        #self.remove_from_stage()
+        self.set_size(20, 20)
 
     def __init__(self):
         r = Random()
@@ -17,3 +18,6 @@ class StarActor(MyActor):
     def update(self, deltaTime: float = 0.0166666666666666666666):
         super().update(deltaTime)
         self.rotate_with(self.__speed * deltaTime)
+
+
+

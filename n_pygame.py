@@ -68,18 +68,27 @@ gamestage = MyStage()
 # Egy Actor létrehozása. A képnek az ./images mappában kell lenni!!! Pos kezdőpozíció, anchor pedig a forgatási pont, és a kép ezen pontja kerül a pos értékre.
 # Itt mindig a MyActorból vagy annak a leszármazottjából legyenek a példányok, mert az kiokosítottam:)
 m1 = MyActor(image="m_jerry.png", pos=(0, 0), anchor=(0, 0))
+m1.set_width(30, 30)
 
 # Másik példány, ugyan azzal a képpel.
 m2 = MyActor(image="m_jerry.png", pos=(220, 220), anchor=(0, 0))
 
 # Méretarányos méretezés. Használjuk mindig az általam készített metódusokat, ha lehet. Pl a méret változtatás Pygame Zero szintjén nem támogatott funkció.
-m2.set_width(30)
+
 
 # Esemény hozzáadása az m2 példányhoz, azaz ha rákattintunk, akkor a fent definiált m2onclick hajtódik végre.
 m2.set_on_mouse_down_listener(m2onclick)
+m2.set_width(30)
+m2.set_rotation(90)
+
 
 # Ez egy kicsivel bonyolultabb létrehozása az Actornak, azaz a StarActor örökli a MyActort, és ott már mindent előkészít. Így itt csak létre kell paraméter nélkül hozni, és csinálja a dolgát önállóan.
 m3 = StarActor()
+m3.set_size(500, 500)
+
+
+for i in range(100):
+    gamestage.add_actor(StarActor())
 
 # A Stagere való kattintást kezeli, azaz ha rákattintunk a képernyőre, akkor a fent definiált m3onclick hajtódik végre.
 gamestage.set_on_mouse_down_listener(m3onclick)

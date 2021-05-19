@@ -11,8 +11,8 @@ class MyActor(Actor):
     _on_mouse_down_listener = 0
     _on_mouse_up_listener = 0
     _on_mouse_move_listener = 0
-    _width: int = -1
-    _height: int = -1
+    _w: int = -1
+    _h: int = -1
 
     def update(self, deltaTime: float = 0.0166666666666666666666):
         self.elapsed_time += deltaTime
@@ -63,12 +63,15 @@ class MyActor(Actor):
         self._on_mouse_move_listener = 0
 
     def set_size(self, width: int, height: int):
-        if self._width == -1 or self._height == -1:
-            self._surf = pygame.transform.scale(self._surf, (self.width, self.height))
+        if width == -1 and height == -1:
+            if self._w == -1 and self._h == -1:
+                self._surf = pygame.transform.scale(self._surf, (self.width, self.height))
+            else:
+                self._surf = pygame.transform.scale(self._surf, (self._w, self._h))
         else:
             self._surf = pygame.transform.scale(self._surf, (width, height))
-        self._width = width
-        self._height = height
+            self._w = width
+            self._h = height
         self._update_pos()
 
     def set_stage(self, stage: 'MyStage'):
@@ -76,7 +79,7 @@ class MyActor(Actor):
 
     def set_rotation(self, degree: int):
         self.angle = degree
-        self.set_size(self._width, self._height)
+        self.set_size(-1, -1)
 
     def rotate_with(self, degree: int):
         self.set_rotation(self.angle + degree)
@@ -89,21 +92,21 @@ class MyActor(Actor):
 
     def set_width(self, width: int, aspect_ratio: bool = True):
         if aspect_ratio:
-            self.set_size(width, int(float(self._height) * (float(width) / float(self._width))))
+            self.set_size(width, int(float(self._h) * (float(width) / float(self._w))))
         else:
-            self.set_size(width, self._height)
+            self.set_size(width, self._h)
 
     def set_height(self, height: int, aspect_ratio: bool = True):
         if aspect_ratio:
-            self.set_size(int(float(self._width) * (float(height) / float(self._height))), height)
+            self.set_size(int(float(self._w) * (float(height) / float(self._h))), height)
         else:
-            self.set_size(self._width, height)
+            self.set_size(self._w, height)
 
     def get_width(self)->int:
-        return self._width
+        return self._w
 
     def get_height(self)->int:
-        return self._height
+        return self._h
 
 class MyStage:
     actors: List[MyActor]
