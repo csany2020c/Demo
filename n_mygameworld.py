@@ -11,6 +11,8 @@ class MyActor(Actor):
     _on_mouse_down_listener = 0
     _on_mouse_up_listener = 0
     _on_mouse_move_listener = 0
+    _on_key_up_listener = 0
+    _on_key_down_listener = 0
     _w: int = -1
     _h: int = -1
 
@@ -61,6 +63,27 @@ class MyActor(Actor):
 
     def remove_on_mouse_move_listener(self):
         self._on_mouse_move_listener = 0
+
+    def on_key_down(self, key, mod, unicode):
+        if self._on_key_down_listener != 0:
+            self._on_key_down_listener(key, mod, unicode)
+
+    def on_key_up(self, key, mod):
+        if self._on_key_up_listener != 0:
+            self._on_key_up_listener(key, mod)
+
+    def set_on_key_down_listener(self, func):
+        self._on_key_down_listener = func
+
+    def set_on_key_up_listener(self, func):
+        self._on_key_up_listener = func
+
+    def remove_on_key_down_listener(self):
+        self._on_key_down_listener = 0
+
+    def remove_on_key_up_listener(self):
+        self._on_key_up_listener = 0
+
 
     def set_size(self, width: int, height: int):
         if width == -1 and height == -1:
@@ -114,6 +137,8 @@ class MyStage:
     _on_mouse_down_listener = 0
     _on_mouse_up_listener = 0
     _on_mouse_move_listener = 0
+    _on_key_up_listener = 0
+    _on_key_down_listener = 0
 
     def __init__(self):
         self.actors = []
@@ -154,6 +179,30 @@ class MyStage:
             self._on_mouse_move_listener(pos)
         for obj in self.actors:
             obj.on_mouse_move(pos)
+
+    def on_key_down(self, key, mod, unicode):
+        if self._on_key_down_listener != 0:
+            self._on_key_down_listener(key, mod, unicode)
+        for obj in self.actors:
+            obj.on_key_down(key, mod, unicode)
+
+    def on_key_up(self, key, mod):
+        if self._on_key_up_listener != 0:
+            self._on_key_up_listener(key, mod)
+        for obj in self.actors:
+            obj.on_key_up(key, mod)
+
+    def set_on_key_down_listener(self, func):
+        self._on_key_down_listener = func
+
+    def set_on_key_up_listener(self, func):
+        self._on_key_up_listener = func
+
+    def remove_on_key_down_listener(self):
+        self._on_key_down_listener = 0
+
+    def remove_on_key_up_listener(self):
+        self._on_key_up_listener = 0
 
     def remove_on_mouse_down_listener(self):
         self._on_mouse_down_listener = 0

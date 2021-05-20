@@ -6,6 +6,7 @@
 # - És már szalad is!
 import pgzrun
 # Ebben vannak a saját fejlesztésú osztályok, a MyStage és a MyActor
+from numpy.distutils.conv_template import unique_key
 from n_mygameworld import *
 from n_staractor import StarActor
 
@@ -30,6 +31,16 @@ def on_mouse_up(pos, button):
     gamestage.on_mouse_up(pos, button)
 
 
+def on_key_down(key, mod, unicode):
+    print("DOWN: " + str(key) + " " + str(mod) + " " + str(unicode))
+    gamestage.on_key_down(key, mod, unicode)
+
+
+def on_key_up(key, mod):
+    print("UP: " + str(key) + " " + str(mod))
+    gamestage.on_key_up(key, mod)
+
+
 # Ez egy Actorhoz illesztett eseménykezelő lesz majd, később kerül hozzáadásra.
 def m2onclick(pos, button):
     # animáltan pozíciót változtat.
@@ -40,6 +51,17 @@ def m2onclick(pos, button):
 def m3onclick(pos, button):
     # animáltan pozíciót változtat. Az új pozíció a kattintás helye
     animate(m3, pos=pos)
+
+
+def keydownlistener(key, mod, unicode):
+    if key == keys.UP:
+        animate(m1, pos=(m1.pos[0], m1.pos[1] - 10), duration=0.1)
+    if key == keys.DOWN:
+        animate(m1, pos=(m1.pos[0], m1.pos[1] + 10), duration=0.1)
+    if key == keys.LEFT:
+        animate(m1, pos=(m1.pos[0] - 10, m1.pos[1]), duration=0.1)
+    if key == keys.RIGHT:
+        animate(m1, pos=(m1.pos[0] + 10, m1.pos[1]), duration=0.1)
 
 
 # A játékmenet (szimuláció) itt lép egyet előre. A dt paraméter a két képkocka közt eltelt idő. 60 fps esetén 0.016666 mp az értéke.
@@ -92,6 +114,7 @@ for i in range(100):
 
 # A Stagere való kattintást kezeli, azaz ha rákattintunk a képernyőre, akkor a fent definiált m3onclick hajtódik végre.
 gamestage.set_on_mouse_down_listener(m3onclick)
+gamestage.set_on_key_down_listener(keydownlistener)
 
 # Hozzá kell adni őket a stagehez, mivel a stage jelenik meg a képernyőn, ezen keresztül jelennek meg majd az Actorok is.
 gamestage.add_actor(m1)
