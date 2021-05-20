@@ -84,6 +84,8 @@ class MyActor(Actor):
     def remove_on_key_up_listener(self):
         self._on_key_up_listener = 0
 
+    def set_image(self, image_url:str):
+        self.image = image_url
 
     def set_size(self, width: int, height: int):
         if width == -1 and height == -1:
