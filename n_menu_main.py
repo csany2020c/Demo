@@ -3,6 +3,10 @@ from n_menu_menustage import *
 from n_menu_gamestage import *
 
 
+def on_key_down(key, mod, unicode):
+    menu.on_key_down(key, mod, unicode)
+
+
 def on_mouse_down(pos, button):
     menu.on_mouse_down(pos, button)
 

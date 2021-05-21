@@ -4,7 +4,7 @@ from n_menu_menustage import *
 class GameStage(MyStage):
 
     def back(self, pos, btn):
-        self.menu.scr = 0
+        self.menu.menu_Main()
 
     def jerrymove(self, pos, btn):
         animate(self.m, pos=pos)
