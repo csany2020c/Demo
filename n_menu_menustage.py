@@ -19,6 +19,7 @@ class Menustage(MyStage):
 
     def __init__(self):
         super().__init__()
+
         menuitem1: MyActor = MyActor("star.png", pos=(100, 100), anchor=(0, 0))
         self.add_actor(menuitem1)
         menuitem1.set_on_mouse_down_listener(self.menu_Game)
@@ -31,6 +32,16 @@ class Menustage(MyStage):
         self.add_actor(menuitem3)
         menuitem3.set_on_mouse_down_listener(self.menu_Blank)
 
+        text1: MyLabel = MyLabel()
+        text1.set_x(40)
+        text1.set_rotation(-20)
+        self.add_actor(text1)
+
+
+        text2: MyButton = MyButton()
+        text2.set_x(140)
+        text2.set_y(100)
+        self.add_actor(text2)
 
         self.onscreenstage : MyStage = self
 
