@@ -21,6 +21,9 @@ class MyActor(Actor):
     _w: int = -1
     _h: int = -1
 
+    def is_on_stage(self) -> bool:
+        return self._stage != 0
+
     def update(self, deltaTime: float = 0.0166666666666666666666):
         self.elapsed_time += deltaTime
 
@@ -239,6 +242,7 @@ class MyStage:
 
     def remove_actor(self, actor: MyActor):
         self.actors.remove(actor)
+        actor.set_stage(0)
 
     def on_mouse_down(self, pos, button):
         if self._on_mouse_down_listener != 0:
