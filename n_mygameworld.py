@@ -309,7 +309,31 @@ class MyStage(MyBaseActor, MyBaseListeners):
                 obj.on_key_up(key, mod)
 
 
-#Minden időzítőt a stagehez vagy actorhoz lehet hozzáadni.
+#Minden időzítőt a stagehez vagy actorhoz lehet hozzáadni. A lényeg, hogy oda lehet beilleszteni, ahol megjelent az .add_timer(...) metódus.
+# pl.: text2.add_timer(MyTickTimer(self.tikk))
+#  ahol a text2 egy Button típus.
+#
+#   Vagy referenciát csinálva:
+#   self.timer: MyIntervalTimer = MyIntervalTimer(csinaldeztfuggveny, 3, 7)
+#   stage.add_timer(self.timer)
+#   ...
+#   Máshol meghívható, akár egy kattintáskor:
+#   self.timer.stop()
+#
+#   Minden időzítő megállítható, elindítható a start() és a stop() metódusokkal.
+#   Az időzítő eltávolítható a remove() függvénnyel.
+#
+#   Az időzítő eseményéhez illesztett függvénynek egy paraméterének kell lenni, ami az időzítőt adja eredményül. Innen lehet lekérdezni például, hogy hányszor futott le, vagy mióta megy éppen.
+#   pl:
+#   text2.add_timer(MyTickTimer(self.tikk))
+
+#     def tikk(self, timer: MyMultiTickTimer):
+#         print("TIKK " + str(timer.count))
+# TIKK 1
+# TIKK 2
+# TIKK 3
+#
+# Ez az osztály minden időzítő őse. Ezeket a funkciókat, amik benne vannak, minden időzítő tudja.
 class MyBaseTimer:
 
     _listener = 0
@@ -347,6 +371,7 @@ class MyBaseTimer:
         self.base_actor.remove_timer(self)
         self.base_actor = 0
 
+
 #Folyamatosan fut, ki és be lehet kapcsolni.
 class MyPermanentTimer(MyBaseTimer):
 
@@ -355,12 +380,16 @@ class MyPermanentTimer(MyBaseTimer):
             self._listener(self)
 
 
+# Folyamatosan fut, de csak meghatározott időközönként futtatja le a kódot.
 class MyTickTimer(MyBaseTimer):
 
-    def __init__(self, func=0, interval: float = 1, startdelay: float = 0, repeat: bool = True):
+    # interval: ennyi időközönként
+    # start_delay: A hozzáadás után ennyivel később fut le először
+    # repeat: ismétli, többször fut
+    def __init__(self, func=0, interval: float = 1, start_delay: float = 0, repeat: bool = True):
         super().__init__(func)
         self.interval: float = interval
-        self.elapsed_time = -startdelay
+        self.elapsed_time = -start_delay
         self.repeat: bool = repeat
 
     def _do_timer(self):
@@ -376,8 +405,11 @@ class MyTickTimer(MyBaseTimer):
                 self.elapsed_time = self.correction
 
 
+# folyamatosan, minden száításkor lefut egy intervallumon belül.
 class MyIntervalTimer(MyBaseTimer):
 
+    #start_time: futás kezdete
+    #stop_time: futás vége
     def __init__(self, func=0, start_time: float = 1, stop_time: float = 4):
         super().__init__(func)
         self.start_time = start_time
@@ -391,6 +423,7 @@ class MyIntervalTimer(MyBaseTimer):
                 self._listener(self)
 
 
+# Egyszer fut le a hozzáadást követően. Ezután eltávolítja megát a birtokló objektum példányból.
 class MyOneTickTimer(MyBaseTimer):
 
     def __init__(self, func=0, interval: float = 1):
@@ -407,6 +440,7 @@ class MyOneTickTimer(MyBaseTimer):
             self.remove()
 
 
+# Meg lehet adni, hogy hányszor fusson le, és ez milyen időközönként legyen. Ezután eltávolítja megát a birtokló objektum példányból.
 class MyMultiTickTimer(MyBaseTimer):
 
     def __init__(self, func=0, interval: float = 1, startdelay: float = 0, count = 5):

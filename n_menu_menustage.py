@@ -51,8 +51,8 @@ class Menustage(MyStage):
         #self.add_timer(MyMultiTickTimer(self.tikk, startdelay=1, interval=0.2, count=3))
         #text2.add_timer(MyTickTimer(self.tikk))
 
-    def tikk(self, timer):
-        print("TIKK")
+    def tikk(self, timer: MyMultiTickTimer):
+        print("TIKK " + str(timer.count))
 
     def draw(self):
         if self == self.onscreenstage:
