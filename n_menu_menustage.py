@@ -45,17 +45,26 @@ class Menustage(MyStage):
 
         self.onscreenstage : MyStage = self
 
+        self.ttt = MyMultiTickTimer(self.tikk, interval=1, count=3)
+        self.add_timer(self.ttt)
+
+        #self.add_timer(MyMultiTickTimer(self.tikk, startdelay=1, interval=0.2, count=3))
+        #text2.add_timer(MyTickTimer(self.tikk))
+
+    def tikk(self, timer):
+        print("TIKK")
+
     def draw(self):
         if self == self.onscreenstage:
             super(Menustage, self).draw()
         else:
             self.onscreenstage.draw()
 
-    def update(self, deltaTime: float = 0.0166666666666666666666):
+    def update(self, delta_time: float = 0.0166666666666666666666):
         if self == self.onscreenstage:
-            super(Menustage, self).update(deltaTime)
+            super(Menustage, self).update(delta_time)
         else:
-            self.onscreenstage.update(deltaTime)
+            self.onscreenstage.update(delta_time)
 
     def on_mouse_down(self, pos, button):
         if self == self.onscreenstage:
